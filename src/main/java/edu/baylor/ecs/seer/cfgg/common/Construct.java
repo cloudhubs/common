@@ -5,7 +5,6 @@ import java.util.List;
 
 public abstract class Construct {
 
-    private String name;
     private List<Construct> children;
     private List<String> parameters;
 
@@ -14,13 +13,13 @@ public abstract class Construct {
         this.parameters = new ArrayList<>();
     }
 
-    public final void setName(String name) {
-        this.name = name;
+    public final Boolean isLeaf() {
+        return this.children.size() == 0;
     }
 
-    public final String getName() {
-        return this.name;
-    }
+    public abstract String genDot();
+
+    public abstract String getName();
 
     public final void addParameter(String parameter) {
         this.parameters.add(parameter);
@@ -45,11 +44,5 @@ public abstract class Construct {
     public final List<Construct> getChildren() {
         return this.children;
     }
-
-    public final Boolean isLeaf() {
-        return this.children.size() == 0;
-    }
-
-    public abstract String genDot();
 
 }
