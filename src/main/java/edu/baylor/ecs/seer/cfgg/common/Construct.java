@@ -1,7 +1,10 @@
 package edu.baylor.ecs.seer.cfgg.common;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public abstract class Construct {
 
@@ -43,6 +46,20 @@ public abstract class Construct {
 
     public final List<Construct> getChildren() {
         return this.children;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Construct construct = (Construct) o;
+        return Objects.equals(children, construct.children) &&
+                Objects.equals(parameters, construct.parameters);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(children, parameters);
     }
 
 }

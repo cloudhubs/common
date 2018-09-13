@@ -1,6 +1,15 @@
 package edu.baylor.ecs.seer.cfgg.common;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+@JsonSerialize(using = ConstructSerializer.class)
+@JsonDeserialize(using = ConstructDeserializer.class)
 public class For extends Construct {
+
+    private For() {
+        super();
+    }
 
     public For(String decl, String condition, String inc) {
         super();

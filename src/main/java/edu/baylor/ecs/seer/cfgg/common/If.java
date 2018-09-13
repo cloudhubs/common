@@ -1,11 +1,22 @@
 package edu.baylor.ecs.seer.cfgg.common;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
+@JsonSerialize(using = IfSerializer.class)
+@JsonDeserialize(using = ConstructDeserializer.class)
 public class If extends Construct {
 
     private If elif;
+
+    private If() {
+        super();
+        this.elif = null;
+    }
 
     // Note: if condition is null, the if is assumed to be an else
     public If(String condition) {
@@ -50,6 +61,20 @@ public class If extends Construct {
 
     public If getElif() {
         return this.elif;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        If anIf = (If) o;
+        return Objects.equals(elif, anIf.elif);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), elif);
     }
 
 }
