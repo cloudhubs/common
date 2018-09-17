@@ -15,6 +15,6 @@ public class NodeSerializer extends StdSerializer<Node> {
 
     @Override
     public void serialize(Node value, JsonGenerator gen, SerializerProvider provider) throws IOException {
-        
+
     }
 }
