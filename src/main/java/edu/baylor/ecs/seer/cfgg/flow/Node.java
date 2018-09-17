@@ -37,6 +37,7 @@ public class Node {
     private List<Node> parents;
     private List<Node> children;
     private Integer height;
+    private String raw;
 
     private Node() {
         this.id = null;
@@ -44,6 +45,7 @@ public class Node {
         this.height = null;
         this.parents = new ArrayList<Node>();
         this.children = new ArrayList<Node>();
+        this.raw = "";
     }
 
     public Node(String id, String type) {
@@ -52,6 +54,7 @@ public class Node {
         this.height = 0;
         this.parents = new ArrayList<Node>();
         this.children = new ArrayList<Node>();
+        this.raw = "";
     }
 
     public Node(String id, String type, Integer height) {
@@ -60,6 +63,7 @@ public class Node {
         this.height = height;
         this.parents = new ArrayList<Node>();
         this.children = new ArrayList<Node>();
+        this.raw = "";
     }
 
     public Node(String id, String type, Integer height, Node parent, Node child) {
@@ -80,6 +84,7 @@ public class Node {
         if (child != null) {
             this.addChild(child, true);
         }
+        this.raw = "";
     }
 
     public Node(String id, String type, Integer height, List<Node> parents, List<Node> children) {
@@ -109,6 +114,7 @@ public class Node {
         } else {
             this.children = new ArrayList<Node>();
         }
+        this.raw = "";
     }
 
     /**
@@ -230,6 +236,14 @@ public class Node {
 
     public Integer getHeight() {
         return height;
+    }
+
+    public String getRaw() {
+        return raw;
+    }
+
+    public void setRaw(String raw) {
+        this.raw = raw;
     }
 
     @Override
