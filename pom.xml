@@ -4,15 +4,28 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.baylor.ecs.seer</groupId>
-    <artifactId>common-common</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>CFGG Common</name>
+    <artifactId>seer-common</artifactId>
+    <version>0.1.0-RELEASE</version>
+    <name>Seer Common</name>
     <packaging>jar</packaging>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.deployment.skip>false</project.deployment.skip>
+    </properties>
+
     <build>
-        <finalName>cfgg-common</finalName>
+        <finalName>seer-common</finalName>
 
         <plugins>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <skip>${project.deployment.skip}</skip> <!--false-->
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -45,4 +58,30 @@
             <version>2.9.6</version>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>maven-group</id>
+            <url>https://seer.ecs.baylor.edu/nexus/maven-group/</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus snapshots</name>
+            <url>https://seer.ecs.baylor.edu/nexus/repository/maven-snapshots/</url>
+            <layout>default</layout>
+        </snapshotRepository>
+
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus releases</name>
+            <url>https://seer.ecs.baylor.edu/nexus/repository/maven-releases/</url>
+            <layout>default</layout>
+        </repository>
+
+    </distributionManagement>
+
 </project>
