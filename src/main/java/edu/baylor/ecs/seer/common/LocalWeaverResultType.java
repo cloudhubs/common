@@ -1,4 +1,4 @@
-package edu.baylor.ecs.seer.common.gw;
+package edu.baylor.ecs.seer.common;
 
 /**
  * This is an enum of different local weaver result types, used to determine the type of data obtained from local

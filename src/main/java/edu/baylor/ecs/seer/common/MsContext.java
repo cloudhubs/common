@@ -1,4 +1,4 @@
-package edu.baylor.ecs.seer.common.gw;
+package edu.baylor.ecs.seer.common;
 
 /**
  * This is a DTO for local weaver results. It is included in HarvesterData to transfer local weaver results.

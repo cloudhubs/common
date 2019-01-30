@@ -1,4 +1,4 @@
-package edu.baylor.ecs.seer.common.gw;
+package edu.baylor.ecs.seer.common;
 
 import java.util.ArrayList;
 import java.util.List;

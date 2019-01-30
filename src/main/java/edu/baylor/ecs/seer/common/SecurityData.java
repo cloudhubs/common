@@ -1,4 +1,4 @@
-package edu.baylor.ecs.seer.common.gw;
+package edu.baylor.ecs.seer.common;
 
 /**
  * This is a DTO for the Security module. It is currently unused, as the Security module does not return data
