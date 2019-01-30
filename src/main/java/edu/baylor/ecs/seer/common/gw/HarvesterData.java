@@ -1,4 +1,4 @@
-package edu.baylor.ecs.seer.common.domain;
+package edu.baylor.ecs.seer.common.gw;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public class HarvesterData {
     private String message;
 
     /**
-     * This is a list of all LocalWeaverResult objects associated with the request.
+     * This is a list of all MsContext objects associated with the request.
      */
-    private ArrayList<LocalWeaverResult> data;
+    private ArrayList<MsContext> data;
 
     public HarvesterData() {
         //Default Constructor
@@ -44,11 +44,11 @@ public class HarvesterData {
         this.message = message;
     }
 
-    public ArrayList<LocalWeaverResult> getData() {
+    public ArrayList<MsContext> getData() {
         return data;
     }
 
-    public void setData(ArrayList<LocalWeaverResult> data) {
+    public void setData(ArrayList<MsContext> data) {
         this.data = data;
     }
 
