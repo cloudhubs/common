@@ -1,4 +1,4 @@
-package edu.baylor.ecs.seer.common;
+package edu.baylor.ecs.seer.common.context;
 
 import java.util.List;
 
@@ -21,6 +21,19 @@ public class SeerContext {
      * Each MsContext represents information about the μservice / module
      */
     private List<MsContext> msContextList;
+
+    private SeerRequestContext seerRequestSpecification;
+
+    private SeerResponseContext seerResponseSpecification;
+
+    private SeerSecurityContext seerSecurityContext;
+
+    private SeerEntityContext seerEntityContext;
+
+    private SeerSemanticContext seerSemanticCloneContext;
+
+    private SeerSyntaxContext seerSyntaxCloneContext;
+
 
 
 }

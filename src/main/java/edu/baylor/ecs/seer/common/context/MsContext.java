@@ -1,4 +1,4 @@
-package edu.baylor.ecs.seer.common;
+package edu.baylor.ecs.seer.common.context;
 
 /**
  * This is a DTO for local weaver results. It is included in HarvesterData to transfer local weaver results.
@@ -35,12 +35,12 @@ public class MsContext {
     /**
      * Entity context
      */
-    private MsEntityContext entityContext;
+    private SeerEntityContext entityContext;
 
     /**
      * Security context
      */
-    private MsSecurityContext securityContext;
+    private SeerSecurityContext securityContext;
 
 
 
