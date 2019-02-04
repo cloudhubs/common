@@ -1,6 +1,6 @@
 package edu.baylor.ecs.seer.common;
 
-import edu.baylor.ecs.seer.common.context.MsContext;
+import edu.baylor.ecs.seer.common.context.SeerMsContext;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public class HarvesterData {
     private String message;
 
     /**
-     * This is a list of all MsContext objects associated with the request.
+     * This is a list of all SeerMsContext objects associated with the request.
      */
-    private ArrayList<MsContext> data;
+    private ArrayList<SeerMsContext> data;
 
     public HarvesterData() {
         //Default Constructor
@@ -46,11 +46,11 @@ public class HarvesterData {
         this.message = message;
     }
 
-    public ArrayList<MsContext> getData() {
+    public ArrayList<SeerMsContext> getData() {
         return data;
     }
 
-    public void setData(ArrayList<MsContext> data) {
+    public void setData(ArrayList<SeerMsContext> data) {
         this.data = data;
     }
 
