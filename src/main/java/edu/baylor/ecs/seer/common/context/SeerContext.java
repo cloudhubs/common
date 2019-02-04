@@ -7,33 +7,43 @@ import java.util.List;
  */
 public class SeerContext {
 
-    /**
-     * This is the HTTP status of the request.
-     */
-    private int status;
 
     /**
-     * This is the HTTP message from the request.
+     * Each SeerMsContext represents information about the μservice / module
      */
-    private String message;
+    private List<SeerMsContext> msContext;
 
     /**
-     * Each MsContext represents information about the μservice / module
+     * Request information
      */
-    private List<MsContext> msContextList;
+    private SeerRequestContext request;
 
-    private SeerRequestContext seerRequestSpecification;
+    /**
+     * Response information
+     */
+    private SeerResponseContext response;
 
-    private SeerResponseContext seerResponseSpecification;
+    public List<SeerMsContext> getMsContext() {
+        return msContext;
+    }
 
-    private SeerSecurityContext seerSecurityContext;
+    public void setMsContext(List<SeerMsContext> msContext) {
+        this.msContext = msContext;
+    }
 
-    private SeerEntityContext seerEntityContext;
+    public SeerRequestContext getRequest() {
+        return request;
+    }
 
-    private SeerSemanticContext seerSemanticCloneContext;
+    public void setRequest(SeerRequestContext request) {
+        this.request = request;
+    }
 
-    private SeerSyntaxContext seerSyntaxCloneContext;
+    public SeerResponseContext getResponse() {
+        return response;
+    }
 
-
-
+    public void setResponse(SeerResponseContext response) {
+        this.response = response;
+    }
 }
