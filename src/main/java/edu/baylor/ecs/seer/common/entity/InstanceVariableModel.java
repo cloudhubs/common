@@ -1,4 +1,6 @@
-package edu.baylor.ecs.seer.common.domain;
+package edu.baylor.ecs.seer.common.entity;
+
+import edu.baylor.ecs.seer.common.Pair;
 
 import java.util.ArrayList;
 import java.util.List;

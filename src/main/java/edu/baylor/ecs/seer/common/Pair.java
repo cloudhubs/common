@@ -1,4 +1,4 @@
-package edu.baylor.ecs.seer.common.domain;
+package edu.baylor.ecs.seer.common;
 
 public class Pair<F, S> {
     private F first;

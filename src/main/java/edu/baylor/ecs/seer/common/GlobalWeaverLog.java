@@ -1,4 +1,4 @@
-package edu.baylor.ecs.seer.common.domain;
+package edu.baylor.ecs.seer.common;
 
 //@Entity
 public class GlobalWeaverLog {

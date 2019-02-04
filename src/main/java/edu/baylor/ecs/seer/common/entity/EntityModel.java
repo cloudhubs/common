@@ -1,4 +1,4 @@
-package edu.baylor.ecs.seer.common.domain;
+package edu.baylor.ecs.seer.common.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
