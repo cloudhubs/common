@@ -1,6 +1,10 @@
 package edu.baylor.ecs.seer.common.context;
 
 
+import javassist.CtClass;
+
+import java.util.List;
+
 public class SeerMsContext {
 
     /**
@@ -37,6 +41,11 @@ public class SeerMsContext {
      * Security context
      */
     private SeerSyntaxContext synatx;
+
+    /**
+     * Resource pool of javassist resource clases
+     */
+    private List<CtClass> ctClassesResourcePool;
 
     public SeerMsContext() {
     }
@@ -95,5 +104,13 @@ public class SeerMsContext {
 
     public void setSyntax(SeerSyntaxContext synatx) {
         this.synatx = synatx;
+    }
+
+    public List<CtClass> getCtClassesResourcePool() {
+        return ctClassesResourcePool;
+    }
+
+    public void setCtClassesResourcePool(List<CtClass> ctClassesResourcePool) {
+        this.ctClassesResourcePool = ctClassesResourcePool;
     }
 }
