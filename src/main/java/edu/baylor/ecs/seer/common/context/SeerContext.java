@@ -7,11 +7,10 @@ import java.util.List;
  */
 public class SeerContext {
 
-
     /**
      * Each SeerMsContext represents information about the μservice / module
      */
-    private List<SeerMsContext> msContext;
+    private List<SeerMsContext> msContexts;
 
     /**
      * Request information
@@ -23,12 +22,12 @@ public class SeerContext {
      */
     private SeerResponseContext response;
 
-    public List<SeerMsContext> getMsContext() {
-        return msContext;
+    public List<SeerMsContext> getMsContexts() {
+        return msContexts;
     }
 
-    public void setMsContext(List<SeerMsContext> msContext) {
-        this.msContext = msContext;
+    public void setMsContexts(List<SeerMsContext> msContexts) {
+        this.msContexts = msContexts;
     }
 
     public SeerRequestContext getRequest() {
