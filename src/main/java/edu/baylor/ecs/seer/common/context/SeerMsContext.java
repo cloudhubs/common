@@ -93,7 +93,7 @@ public class SeerMsContext {
         return synatx;
     }
 
-    public void setSynatx(SeerSyntaxContext synatx) {
+    public void setSyntax(SeerSyntaxContext synatx) {
         this.synatx = synatx;
     }
 }
