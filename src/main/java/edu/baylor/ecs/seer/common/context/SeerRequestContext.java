@@ -22,8 +22,11 @@ public class SeerRequestContext {
      */
     private boolean useRemote;
 
-
     private Timestamp requestInitiated;
+
+    private String entityAnalyzerInterface;
+
+    private String securityAnalyzerInterface;
 
     public String getPathToCompiledMicroservices() {
         return pathToCompiledMicroservices;
@@ -43,6 +46,22 @@ public class SeerRequestContext {
 
     public boolean isUseRemote() {
         return useRemote;
+    }
+
+    public String getEntityAnalyzerInterface() {
+        return entityAnalyzerInterface;
+    }
+
+    public void setEntityAnalyzerInterface(String entityAnalyzerInterface) {
+        this.entityAnalyzerInterface = entityAnalyzerInterface;
+    }
+
+    public String getSecurityAnalyzerInterface() {
+        return securityAnalyzerInterface;
+    }
+
+    public void setSecurityAnalyzerInterface(String securityAnalyzerInterface) {
+        this.securityAnalyzerInterface = securityAnalyzerInterface;
     }
 
     public void setUseRemote(boolean useRemote) {
