@@ -5,6 +5,15 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class name
+ * List of fields
+ *  list of annotations
+ *      each annotation: name, attribute - list of values
+ *      @NotNull, @OneToOne
+ *
+ */
+
 public class EntityModel {
     private String className;
     private List<InstanceVariableModel> instanceVariables;

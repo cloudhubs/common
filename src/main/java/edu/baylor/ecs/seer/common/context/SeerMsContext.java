@@ -30,11 +30,6 @@ public class SeerMsContext {
     /**
      * Security context
      */
-    private SeerSecurityContext security;
-
-    /**
-     * Security context
-     */
     private SeerSemanticContext semantic;
 
     /**
@@ -80,14 +75,6 @@ public class SeerMsContext {
 
     public void setEntity(SeerEntityContext entity) {
         this.entity = entity;
-    }
-
-    public SeerSecurityContext getSecurity() {
-        return security;
-    }
-
-    public void setSecurity(SeerSecurityContext security) {
-        this.security = security;
     }
 
     public SeerSemanticContext getSemantic() {

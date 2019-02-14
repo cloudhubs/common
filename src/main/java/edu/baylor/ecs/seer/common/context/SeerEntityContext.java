@@ -12,4 +12,11 @@ public class SeerEntityContext {
 
     private List<EntityModel> entities;
 
+    public List<EntityModel> getEntities() {
+        return entities;
+    }
+
+    public void setEntities(List<EntityModel> entities) {
+        this.entities = entities;
+    }
 }

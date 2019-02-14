@@ -22,6 +22,11 @@ public class SeerContext {
      */
     private SeerResponseContext response;
 
+    /**
+     * Seer Security Context
+     */
+    private SeerSecurityContext security;
+
     public List<SeerMsContext> getMsContexts() {
         return msContexts;
     }
@@ -44,5 +49,13 @@ public class SeerContext {
 
     public void setResponse(SeerResponseContext response) {
         this.response = response;
+    }
+
+    public SeerSecurityContext getSecurity() {
+        return security;
+    }
+
+    public void setSecurity(SeerSecurityContext security) {
+        this.security = security;
     }
 }
