@@ -9,6 +9,8 @@ public class SecurityRole {
      */
     private String roleName;
 
+    public SecurityRole(){}
+
     public SecurityRole(String roleName) {
         this.roleName = roleName;
     }

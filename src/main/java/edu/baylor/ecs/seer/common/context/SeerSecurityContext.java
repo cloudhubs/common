@@ -27,6 +27,15 @@ public class SeerSecurityContext {
      */
     private Set<SecurityMethod> securityMethods;
 
+    public SeerSecurityContext() {
+    }
+
+    public SeerSecurityContext(String securityRoleSpecification, List<String> securityViolations, Set<SecurityMethod> securityMethods) {
+        this.securityRoleSpecification = securityRoleSpecification;
+        this.securityViolations = securityViolations;
+        this.securityMethods = securityMethods;
+    }
+
     public SeerSecurityContext(String securityRoleSpecification) {
         this.securityRoleSpecification = securityRoleSpecification;
     }

@@ -18,6 +18,11 @@ public class SeerRequestContext {
     private List<Pair<String, Integer>> portsToMicroservices;
 
     /**
+     * Local weaver ip and port
+     */
+    private String localWeaverHttp;
+
+    /**
      *
      */
     private boolean useRemote;
@@ -74,5 +79,13 @@ public class SeerRequestContext {
 
     public void setRequestInitiated(Timestamp requestInitiated) {
         this.requestInitiated = requestInitiated;
+    }
+
+    public String getLocalWeaverHttp() {
+        return localWeaverHttp;
+    }
+
+    public void setLocalWeaverHttp(String localWeaverHttp) {
+        this.localWeaverHttp = localWeaverHttp;
     }
 }
