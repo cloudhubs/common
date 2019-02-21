@@ -27,6 +27,11 @@ public class SeerContext {
      */
     private SeerSecurityContext security;
 
+    /**
+     * Seer global information
+     */
+    private SeerGlobalContext global;
+
     public List<SeerMsContext> getMsContexts() {
         return msContexts;
     }
@@ -49,6 +54,14 @@ public class SeerContext {
 
     public void setResponse(SeerResponseContext response) {
         this.response = response;
+    }
+
+    public SeerGlobalContext getGlobal() {
+        return global;
+    }
+
+    public void setGlobal(SeerGlobalContext global) {
+        this.global = global;
     }
 
     public SeerSecurityContext getSecurity() {

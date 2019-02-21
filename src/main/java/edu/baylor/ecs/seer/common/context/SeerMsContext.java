@@ -23,19 +23,31 @@ public class SeerMsContext {
     private Integer port;
 
     /**
-     * Entity context
+     * CtClasses
+     */
+    private List<CtClass> ctClasses;
+
+    /**
+     * Entity Context
      */
     private SeerEntityContext entity;
 
     /**
-     * Security context
+     * Security Semantic Context
      */
     private SeerSemanticContext semantic;
 
     /**
-     * Security context
+     * Security Syntax Context
      */
-    private SeerSyntaxContext synatx;
+    private SeerSyntaxContext syntax;
+
+    /**
+     * Seer Flow Context
+     */
+
+    private SeerFlowContext flow;
+
 
     /**
      * Resource pool of javassist resource clases
@@ -69,6 +81,14 @@ public class SeerMsContext {
         this.port = port;
     }
 
+    public List<CtClass> getCtClasses() {
+        return ctClasses;
+    }
+
+    public void setCtClasses(List<CtClass> ctClasses) {
+        this.ctClasses = ctClasses;
+    }
+
     public SeerEntityContext getEntity() {
         return entity;
     }
@@ -85,12 +105,12 @@ public class SeerMsContext {
         this.semantic = semantic;
     }
 
-    public SeerSyntaxContext getSynatx() {
-        return synatx;
+    public SeerSyntaxContext getSyntax() {
+        return syntax;
     }
 
     public void setSyntax(SeerSyntaxContext synatx) {
-        this.synatx = synatx;
+        this.syntax = synatx;
     }
 
     public List<CtClass> getCtClassesResourcePool() {
@@ -99,5 +119,13 @@ public class SeerMsContext {
 
     public void setCtClassesResourcePool(List<CtClass> ctClassesResourcePool) {
         this.ctClassesResourcePool = ctClassesResourcePool;
+    }
+
+    public SeerFlowContext getFlow() {
+        return flow;
+    }
+
+    public void setFlow(SeerFlowContext flow) {
+        this.flow = flow;
     }
 }

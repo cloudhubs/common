@@ -10,6 +10,8 @@ import java.util.List;
  */
 public class SeerEntityContext {
 
+    private Integer entityCounter;
+
     private List<EntityModel> entities;
 
     public List<EntityModel> getEntities() {
@@ -18,5 +20,13 @@ public class SeerEntityContext {
 
     public void setEntities(List<EntityModel> entities) {
         this.entities = entities;
+    }
+
+    public Integer getEntityCounter() {
+        return entityCounter;
+    }
+
+    public void setEntityCounter(Integer entityCounter) {
+        this.entityCounter = entityCounter;
     }
 }
