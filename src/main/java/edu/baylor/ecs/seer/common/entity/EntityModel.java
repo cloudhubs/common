@@ -16,6 +16,7 @@ import java.util.List;
 
 public class EntityModel {
     private String className;
+
     private List<InstanceVariableModel> instanceVariables;
 
     public EntityModel() {
