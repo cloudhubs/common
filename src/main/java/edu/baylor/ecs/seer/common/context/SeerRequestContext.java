@@ -13,6 +13,11 @@ public class SeerRequestContext {
     private String pathToCompiledMicroservices;
 
     /**
+     * Jar name to identify organization's classes
+     */
+    private String organizationPath;
+
+    /**
      * IP and PORT
      */
     private List<Pair<String, Integer>> portsToMicroservices;
@@ -23,7 +28,7 @@ public class SeerRequestContext {
     private String localWeaverHttp;
 
     /**
-     *
+     * Indicate if using on remote server or on localhost
      */
     private boolean useRemote;
 
@@ -39,6 +44,14 @@ public class SeerRequestContext {
 
     public void setPathToCompiledMicroservices(String pathToCompiledMicroservices) {
         this.pathToCompiledMicroservices = pathToCompiledMicroservices;
+    }
+
+    public String getOrganizationPath() {
+        return organizationPath;
+    }
+
+    public void setOrganizationPath(String organizationPath) {
+        this.organizationPath = organizationPath;
     }
 
     public List<Pair<String, Integer>> getPortsToMicroservices() {
