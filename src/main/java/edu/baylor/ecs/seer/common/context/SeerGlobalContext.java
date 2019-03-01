@@ -10,6 +10,10 @@ public class SeerGlobalContext {
 
     private Integer uiLinesCounter;
 
+    private String umlDiagramSource;
+
+    private String umlDiagramResult;
+
     public Integer getEntityCounter() {
         return entityCounter;
     }
@@ -50,5 +54,21 @@ public class SeerGlobalContext {
 
     public void setUiLinesCounter(Integer uiLinesCounter) {
         this.uiLinesCounter = uiLinesCounter;
+    }
+
+    public String getUmlDiagramSource() {
+        return umlDiagramSource;
+    }
+
+    public void setUmlDiagramSource(String umlDiagramSource) {
+        this.umlDiagramSource = umlDiagramSource;
+    }
+
+    public String getUmlDiagramResult() {
+        return umlDiagramResult;
+    }
+
+    public void setUmlDiagramResult(String umlDiagramResult) {
+        this.umlDiagramResult = umlDiagramResult;
     }
 }

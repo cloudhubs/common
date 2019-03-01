@@ -1,7 +1,6 @@
 package edu.baylor.ecs.seer.common.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +15,10 @@ import java.util.List;
 
 public class EntityModel {
     private String className;
+
+    private String classNameShort;
+
+    private List<SeerField> fields;
 
     private List<InstanceVariableModel> instanceVariables;
 
@@ -42,6 +45,14 @@ public class EntityModel {
         this.className = className;
     }
 
+    public String getClassNameShort() {
+        return classNameShort;
+    }
+
+    public void setClassNameShort(String classNameShort) {
+        this.classNameShort = classNameShort;
+    }
+
     public List<InstanceVariableModel> getInstanceVariables() {
         return instanceVariables;
     }
@@ -58,5 +69,13 @@ public class EntityModel {
 
     public void addInstanceVariableModel(InstanceVariableModel instanceVariableModel){
         this.instanceVariables.add(instanceVariableModel);
+    }
+
+    public List<SeerField> getFields() {
+        return fields;
+    }
+
+    public void setFields(List<SeerField> fields) {
+        this.fields = fields;
     }
 }

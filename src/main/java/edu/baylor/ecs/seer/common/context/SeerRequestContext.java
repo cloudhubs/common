@@ -28,6 +28,16 @@ public class SeerRequestContext {
     private String localWeaverHttp;
 
     /**
+     * Global weaver: Entity Model Microservice ip and port
+     */
+    private String gwEntityHttp;
+
+    /**
+     * Global weaver: Generator Microservice ip and port
+     */
+    private String gwGeneratorHttp;
+
+    /**
      * Indicate if using on remote server or on localhost
      */
     private boolean useRemote;
@@ -37,6 +47,8 @@ public class SeerRequestContext {
     private String entityAnalyzerInterface;
 
     private String securityAnalyzerInterface;
+
+    private String productsDirectory;
 
     public String getPathToCompiledMicroservices() {
         return pathToCompiledMicroservices;
@@ -100,5 +112,29 @@ public class SeerRequestContext {
 
     public void setLocalWeaverHttp(String localWeaverHttp) {
         this.localWeaverHttp = localWeaverHttp;
+    }
+
+    public String getGwEntityHttp() {
+        return gwEntityHttp;
+    }
+
+    public void setGwEntityHttp(String gwEntityHttp) {
+        this.gwEntityHttp = gwEntityHttp;
+    }
+
+    public String getGwGeneratorHttp() {
+        return gwGeneratorHttp;
+    }
+
+    public void setGwGeneratorHttp(String gwGeneratorHttp) {
+        this.gwGeneratorHttp = gwGeneratorHttp;
+    }
+
+    public String getProductsDirectory() {
+        return productsDirectory;
+    }
+
+    public void setProductsDirectory(String productsDirectory) {
+        this.productsDirectory = productsDirectory;
     }
 }

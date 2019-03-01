@@ -14,6 +14,10 @@ public class SeerEntityContext {
 
     private List<EntityModel> entities;
 
+    private String boundedContextSource;
+
+    private String boundedContextResult;
+
     public List<EntityModel> getEntities() {
         return entities;
     }
@@ -28,5 +32,21 @@ public class SeerEntityContext {
 
     public void setEntityCounter(Integer entityCounter) {
         this.entityCounter = entityCounter;
+    }
+
+    public String getBoundedContextSource() {
+        return boundedContextSource;
+    }
+
+    public void setBoundedContextSource(String boundedContextSource) {
+        this.boundedContextSource = boundedContextSource;
+    }
+
+    public String getBoundedContextResult() {
+        return boundedContextResult;
+    }
+
+    public void setBoundedContextResult(String boundedContextResult) {
+        this.boundedContextResult = boundedContextResult;
     }
 }
