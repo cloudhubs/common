@@ -32,6 +32,12 @@ public class SeerContext {
      */
     private SeerGlobalContext global;
 
+    /**
+     * Context map of microservice mash
+     */
+    private SeerEntityContext contextMap;
+
+
     public List<SeerMsContext> getMsContexts() {
         return msContexts;
     }
@@ -70,5 +76,13 @@ public class SeerContext {
 
     public void setSecurity(SeerSecurityContext security) {
         this.security = security;
+    }
+
+    public SeerEntityContext getContextMap() {
+        return contextMap;
+    }
+
+    public void setContextMap(SeerEntityContext contextMap) {
+        this.contextMap = contextMap;
     }
 }
