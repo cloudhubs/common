@@ -13,6 +13,11 @@ public class SeerRequestContext {
     private String pathToCompiledMicroservices;
 
     /**
+     * Organization name in folder structure
+     */
+    private String organizationName;
+
+    /**
      * Jar name to identify organization's classes
      */
     private String organizationPath;
@@ -56,6 +61,14 @@ public class SeerRequestContext {
 
     public void setPathToCompiledMicroservices(String pathToCompiledMicroservices) {
         this.pathToCompiledMicroservices = pathToCompiledMicroservices;
+    }
+
+    public String getOrganizationName() {
+        return organizationName;
+    }
+
+    public void setOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
     }
 
     public String getOrganizationPath() {

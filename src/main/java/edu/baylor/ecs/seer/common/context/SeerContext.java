@@ -1,5 +1,7 @@
 package edu.baylor.ecs.seer.common.context;
 
+import edu.baylor.ecs.seer.common.entity.EntityModel;
+
 import java.util.List;
 
 /**
@@ -36,6 +38,10 @@ public class SeerContext {
      * Context map of microservice mash
      */
     private SeerEntityContext contextMap;
+
+    private EntityModel contextMapEntities;
+
+    private List<SeerEntityCluster> entityClusters;
 
 
     public List<SeerMsContext> getMsContexts() {
@@ -84,5 +90,21 @@ public class SeerContext {
 
     public void setContextMap(SeerEntityContext contextMap) {
         this.contextMap = contextMap;
+    }
+
+    public EntityModel getContextMapEntities() {
+        return contextMapEntities;
+    }
+
+    public void setContextMapEntities(EntityModel contextMapEntities) {
+        this.contextMapEntities = contextMapEntities;
+    }
+
+    public List<SeerEntityCluster> getEntityClusters() {
+        return entityClusters;
+    }
+
+    public void setEntityClusters(List<SeerEntityCluster> entityClusters) {
+        this.entityClusters = entityClusters;
     }
 }

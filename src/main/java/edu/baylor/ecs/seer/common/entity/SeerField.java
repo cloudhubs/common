@@ -1,5 +1,8 @@
 package edu.baylor.ecs.seer.common.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SeerField {
 
     private String name;
@@ -22,17 +25,23 @@ public class SeerField {
 
     private boolean isId;
 
-    public String getName() {
-        return name;
+    private double percentageCandidate;
+
+    private List<SeerField> candidates;
+
+    private boolean isPaired;
+
+    public SeerField() {
+        this.candidates = new ArrayList<>();
     }
+
+    public String getName() { return name; }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
-    }
+    public String getType() { return type; }
 
     public void setType(String type) {
         this.type = type;
@@ -46,13 +55,9 @@ public class SeerField {
         this.fullType = fullType;
     }
 
-    public SeerEntityRelation getSeerEntityRelation() {
-        return seerEntityRelation;
-    }
+    public SeerEntityRelation getSeerEntityRelation() { return seerEntityRelation; }
 
-    public void setSeerEntityRelation(SeerEntityRelation seerEntityRelation) {
-        this.seerEntityRelation = seerEntityRelation;
-    }
+    public void setSeerEntityRelation(SeerEntityRelation seerEntityRelation) { this.seerEntityRelation = seerEntityRelation; }
 
     public int getMin() {
         return min;
@@ -78,9 +83,7 @@ public class SeerField {
         isNotNull = notNull;
     }
 
-    public boolean isUpdatable() {
-        return isUpdatable;
-    }
+    public boolean isUpdatable() { return isUpdatable; }
 
     public void setUpdatable(boolean updatable) {
         isUpdatable = updatable;
@@ -100,5 +103,25 @@ public class SeerField {
 
     public void setId(boolean id) {
         isId = id;
+    }
+
+    public double getPercentageCandidate() { return percentageCandidate; }
+
+    public void setPercentageCandidate(double percentageCandidate) { this.percentageCandidate = percentageCandidate; }
+
+    public List<SeerField> getCandidates() { return candidates; }
+
+    public void setCandidates(List<SeerField> candidates) { this.candidates = candidates; }
+
+    public void setCandidate(SeerField candidate){
+        this.candidates.add(candidate);
+    }
+
+    public boolean isPaired() {
+        return isPaired;
+    }
+
+    public void setPaired(boolean paired) {
+        isPaired = paired;
     }
 }
