@@ -45,9 +45,12 @@ public class SeerMsContext {
     /**
      * Seer Flow Context
      */
-
     private SeerFlowContext flow;
 
+    /**
+     * Seer Api Context
+     */
+    private SeerApiContext api;
 
     /**
      * Resource pool of javassist resource clases
@@ -127,5 +130,13 @@ public class SeerMsContext {
 
     public void setFlow(SeerFlowContext flow) {
         this.flow = flow;
+    }
+
+    public SeerApiContext getApi() {
+        return api;
+    }
+
+    public void setApi(SeerApiContext api) {
+        this.api = api;
     }
 }

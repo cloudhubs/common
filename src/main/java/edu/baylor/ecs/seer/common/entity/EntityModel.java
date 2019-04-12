@@ -1,6 +1,8 @@
 package edu.baylor.ecs.seer.common.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import edu.baylor.ecs.seer.common.api.SeerApiMethod;
+
 import java.util.ArrayList;
 import java.util.List;
 
