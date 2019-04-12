@@ -55,6 +55,9 @@ public class SeerRequestContext {
 
     private String productsDirectory;
 
+    public SeerRequestContext() {
+    }
+
     public String getPathToCompiledMicroservices() {
         return pathToCompiledMicroservices;
     }

@@ -2,6 +2,8 @@ package edu.baylor.ecs.seer.common.api;
 
 import edu.baylor.ecs.seer.common.entity.EntityModel;
 
+import java.util.Objects;
+
 public class SeerApiMethod {
 
     private String className;
@@ -11,6 +13,9 @@ public class SeerApiMethod {
     private SeerApiType seerApiType;
 
     private EntityModel entityModel;
+
+    public SeerApiMethod() {
+    }
 
     public String getClassName() {
         return className;
@@ -42,5 +47,30 @@ public class SeerApiMethod {
 
     public void setEntityModel(EntityModel entityModel) {
         this.entityModel = entityModel;
+    }
+
+
+    @Override
+    public String toString() {
+        return "SeerApiMethod{" +
+                "className='" + className + '\'' +
+                ", methodName='" + methodName + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof SeerApiMethod)) return false;
+        SeerApiMethod that = (SeerApiMethod) o;
+        return Objects.equals(getClassName(), that.getClassName()) &&
+                Objects.equals(getMethodName(), that.getMethodName()) &&
+                getSeerApiType() == that.getSeerApiType() &&
+                Objects.equals(getEntityModel(), that.getEntityModel());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getClassName(), getMethodName(), getSeerApiType(), getEntityModel());
     }
 }

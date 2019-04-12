@@ -2,7 +2,9 @@ package edu.baylor.ecs.seer.common.context;
 
 import edu.baylor.ecs.seer.common.entity.EntityModel;
 
+import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Wraps results from all microservices
@@ -43,6 +45,8 @@ public class SeerContext {
 
     private List<SeerEntityCluster> entityClusters;
 
+    public SeerContext() {
+    }
 
     public List<SeerMsContext> getMsContexts() {
         return msContexts;
@@ -106,5 +110,25 @@ public class SeerContext {
 
     public void setEntityClusters(List<SeerEntityCluster> entityClusters) {
         this.entityClusters = entityClusters;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof SeerContext)) return false;
+        SeerContext that = (SeerContext) o;
+        return Objects.equals(getMsContexts(), that.getMsContexts()) &&
+                Objects.equals(getRequest(), that.getRequest()) &&
+                Objects.equals(getResponse(), that.getResponse()) &&
+                Objects.equals(getSecurity(), that.getSecurity()) &&
+                Objects.equals(getGlobal(), that.getGlobal()) &&
+                Objects.equals(getContextMap(), that.getContextMap()) &&
+                Objects.equals(getContextMapEntities(), that.getContextMapEntities()) &&
+                Objects.equals(getEntityClusters(), that.getEntityClusters());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getMsContexts(), getRequest(), getResponse(), getSecurity(), getGlobal(), getContextMap(), getContextMapEntities(), getEntityClusters());
     }
 }

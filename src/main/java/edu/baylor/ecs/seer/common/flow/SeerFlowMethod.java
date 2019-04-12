@@ -6,6 +6,9 @@ public class SeerFlowMethod {
 
     private String methodName;
 
+    public SeerFlowMethod() {
+    }
+
     public String getClassName() {
         return className;
     }
