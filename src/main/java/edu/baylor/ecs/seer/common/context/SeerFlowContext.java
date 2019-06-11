@@ -10,22 +10,7 @@ public class SeerFlowContext {
 
     private Integer linesOfCode = 0;
 
-    private Map<SeerFlowMethod, List<SeerFlowMethod>> seerFlowMethods;
-
-
-
-    public Map<SeerFlowMethod, List<SeerFlowMethod>> getSeerFlowMethods() {
-        return seerFlowMethods;
-    }
-
-    public void setSeerFlowMethods(Map<SeerFlowMethod, List<SeerFlowMethod>> seerFlowMethods) {
-        this.seerFlowMethods = seerFlowMethods;
-    }
-
-    //    public void addSeerFlowMethod(SeerFlowMethod seerFlowMethod){
-//        this.seerFlowMethods.add(seerFlowMethod);
-//    }
-
+    private List<SeerFlowMethodRepresentation> seerFlowMethods;
 
     public SeerFlowContext() {
     }
@@ -40,5 +25,13 @@ public class SeerFlowContext {
 
     public void setLinesOfCode(Integer linesOfCode) {
         this.linesOfCode = linesOfCode;
+    }
+
+    public List<SeerFlowMethodRepresentation> getSeerFlowMethods() {
+        return seerFlowMethods;
+    }
+
+    public void setSeerFlowMethods(List<SeerFlowMethodRepresentation> seerFlowMethods) {
+        this.seerFlowMethods = seerFlowMethods;
     }
 }
