@@ -36,10 +36,7 @@ public class EntityModel {
     private List<InstanceVariableModel> instanceVariables;
 
     public EntityModel() {
-        this.className = "";
-        this.adjEntityModels = new ArrayList<>();
-        this.setVisited(false);
-        this.instanceVariables = new ArrayList<>();
+
     }
 
     public EntityModel(String className) {
@@ -54,6 +51,13 @@ public class EntityModel {
         this.setVisited(false);
         this.adjEntityModels = new ArrayList<>();
         this.instanceVariables = instanceVariables;
+    }
+
+    public void init(){
+        this.className = "";
+        this.adjEntityModels = new ArrayList<>();
+        this.setVisited(false);
+        this.instanceVariables = new ArrayList<>();
     }
 
     public String getModuleName() {

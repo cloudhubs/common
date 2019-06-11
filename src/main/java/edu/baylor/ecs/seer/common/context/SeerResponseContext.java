@@ -14,5 +14,9 @@ public class SeerResponseContext {
     private Integer status;
     
     private String message;
+
+    public SeerResponseContext(){
+
+    }
      
 }

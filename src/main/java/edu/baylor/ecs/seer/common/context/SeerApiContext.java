@@ -10,7 +10,7 @@ public class SeerApiContext {
     private List<SeerApiMethod> seerApiMethods;
 
     public SeerApiContext() {
-        this.seerApiMethods = new ArrayList<>();
+
     }
 
     public List<SeerApiMethod> getSeerApiMethods() {

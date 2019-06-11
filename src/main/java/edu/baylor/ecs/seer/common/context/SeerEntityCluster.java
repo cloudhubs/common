@@ -10,7 +10,7 @@ public class SeerEntityCluster {
     private List<EntityModel> entityModels;
 
     public SeerEntityCluster(){
-        this.entityModels = new ArrayList<>();
+
     }
 
     public SeerEntityCluster(List<EntityModel> entityModels){

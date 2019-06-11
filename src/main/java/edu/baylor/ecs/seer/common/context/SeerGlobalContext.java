@@ -14,6 +14,10 @@ public class SeerGlobalContext {
 
     private String umlDiagramResult;
 
+    public SeerGlobalContext(){
+
+    }
+
     public Integer getEntityCounter() {
         return entityCounter;
     }

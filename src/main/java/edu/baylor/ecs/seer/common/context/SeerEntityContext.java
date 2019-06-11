@@ -18,6 +18,10 @@ public class SeerEntityContext {
 
     private String boundedContextResult;
 
+    public SeerEntityContext(){
+
+    }
+
     public List<EntityModel> getEntities() {
         return entities;
     }
