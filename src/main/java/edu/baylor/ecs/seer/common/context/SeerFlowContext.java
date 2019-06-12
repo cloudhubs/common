@@ -1,10 +1,8 @@
 package edu.baylor.ecs.seer.common.context;
 
-import edu.baylor.ecs.seer.common.flow.SeerFlowMethod;
+import edu.baylor.ecs.seer.common.entity.SeerFlowMethodRepresentation;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class SeerFlowContext {
 

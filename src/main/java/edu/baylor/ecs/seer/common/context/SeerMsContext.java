@@ -1,10 +1,5 @@
 package edu.baylor.ecs.seer.common.context;
 
-
-import javassist.CtClass;
-
-import java.util.List;
-
 public class SeerMsContext {
 
     /**
@@ -21,11 +16,6 @@ public class SeerMsContext {
      * Microservice port
      */
     private Integer port;
-
-    /**
-     * CtClasses
-     */
-    private List<CtClass> ctClasses;
 
     /**
      * Entity Context
@@ -52,12 +42,8 @@ public class SeerMsContext {
      */
     private SeerApiContext api;
 
-    /**
-     * Resource pool of javassist resource clases
-     */
-    private List<CtClass> ctClassesResourcePool;
-
     public SeerMsContext() {
+
     }
 
     public String getModuleName() {
@@ -84,14 +70,6 @@ public class SeerMsContext {
         this.port = port;
     }
 
-    public List<CtClass> getCtClasses() {
-        return ctClasses;
-    }
-
-    public void setCtClasses(List<CtClass> ctClasses) {
-        this.ctClasses = ctClasses;
-    }
-
     public SeerEntityContext getEntity() {
         return entity;
     }
@@ -114,14 +92,6 @@ public class SeerMsContext {
 
     public void setSyntax(SeerSyntaxContext synatx) {
         this.syntax = synatx;
-    }
-
-    public List<CtClass> getCtClassesResourcePool() {
-        return ctClassesResourcePool;
-    }
-
-    public void setCtClassesResourcePool(List<CtClass> ctClassesResourcePool) {
-        this.ctClassesResourcePool = ctClassesResourcePool;
     }
 
     public SeerFlowContext getFlow() {
