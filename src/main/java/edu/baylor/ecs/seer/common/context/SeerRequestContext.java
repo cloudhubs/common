@@ -43,6 +43,11 @@ public class SeerRequestContext {
     private String gwGeneratorHttp;
 
     /**
+     * Global weaver: Generator Microservice ip and port
+     */
+    private String gwFlowHttp;
+
+    /**
      * Indicate if using on remote server or on localhost
      */
     private boolean useRemote;
@@ -144,6 +149,14 @@ public class SeerRequestContext {
 
     public void setGwGeneratorHttp(String gwGeneratorHttp) {
         this.gwGeneratorHttp = gwGeneratorHttp;
+    }
+
+    public String getGwFlowHttp() {
+        return gwFlowHttp;
+    }
+
+    public void setGwFlowHttp(String gwFlowHttp) {
+        this.gwFlowHttp = gwFlowHttp;
     }
 
     public String getProductsDirectory() {

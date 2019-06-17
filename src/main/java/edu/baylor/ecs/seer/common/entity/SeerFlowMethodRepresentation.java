@@ -16,6 +16,10 @@ public class SeerFlowMethodRepresentation {
 
     private Map<Integer, FlowNode> nodes;
 
+    private String source;
+
+    private String result;
+
     public SeerFlowMethodRepresentation() {
     }
 
@@ -55,5 +59,21 @@ public class SeerFlowMethodRepresentation {
 
     public void setNodes(Map<Integer, FlowNode> nodes) {
         this.nodes = nodes;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
     }
 }
