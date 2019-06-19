@@ -1,5 +1,6 @@
 package edu.baylor.ecs.seer.common.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -40,6 +41,20 @@ public class EntityModel {
         this.setVisited(false);
         this.adjEntityModels = new ArrayList<>();
         this.instanceVariables = instanceVariables;
+    }
+
+    @JsonIgnore
+    public String getSimpleClassName(){
+        int index = this.className.lastIndexOf('.');
+        return (index > 0) ? this.className.substring(index + 1) : this.className;
+    }
+
+    public void addInstanceVariableModel(InstanceVariableModel instanceVariableModel){
+        this.instanceVariables.add(instanceVariableModel);
+    }
+
+    public void setAdjEntityModel(EntityModel entityModel){
+        this.adjEntityModels.add(entityModel);
     }
 
 }
