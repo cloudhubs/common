@@ -1,5 +1,10 @@
 package edu.baylor.ecs.seer.common.context;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 public class SeerMsContext {
 
     /**
@@ -42,71 +47,4 @@ public class SeerMsContext {
      */
     private SeerApiContext api;
 
-    public SeerMsContext() {
-
-    }
-
-    public String getModuleName() {
-        return moduleName;
-    }
-
-    public void setModuleName(String moduleName) {
-        this.moduleName = moduleName;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public Integer getPort() {
-        return port;
-    }
-
-    public void setPort(Integer port) {
-        this.port = port;
-    }
-
-    public SeerEntityContext getEntity() {
-        return entity;
-    }
-
-    public void setEntity(SeerEntityContext entity) {
-        this.entity = entity;
-    }
-
-    public SeerSemanticContext getSemantic() {
-        return semantic;
-    }
-
-    public void setSemantic(SeerSemanticContext semantic) {
-        this.semantic = semantic;
-    }
-
-    public SeerSyntaxContext getSyntax() {
-        return syntax;
-    }
-
-    public void setSyntax(SeerSyntaxContext synatx) {
-        this.syntax = synatx;
-    }
-
-    public SeerFlowContext getFlow() {
-        return flow;
-    }
-
-    public void setFlow(SeerFlowContext flow) {
-        this.flow = flow;
-    }
-
-    public SeerApiContext getApi() {
-        return api;
-    }
-
-    public void setApi(SeerApiContext api) {
-        this.api = api;
-    }
 }

@@ -1,5 +1,8 @@
 package edu.baylor.ecs.seer.common;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -9,6 +12,8 @@ import java.util.Objects;
  * a string defining its data and a list of children that has no bounds on its size. The tree structure allows for a
  * child to have its parent as one of its children.
  */
+@Data
+@NoArgsConstructor
 public class Node {
 
     /**
@@ -144,29 +149,5 @@ public class Node {
             }
         }
         return false;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Node node = (Node) o;
-        return Objects.equals(data, node.data) &&
-                Objects.equals(children, node.children);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(data, children);
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder str = new StringBuilder();
-        str.append("Node:\nRole: ").append(this.data).append("\n");
-        for (Node child : this.children) {
-            str.append("Child Role: ").append(child.data).append("\n");
-        }
-        return str.toString();
     }
 }

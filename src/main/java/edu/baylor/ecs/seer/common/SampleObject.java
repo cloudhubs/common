@@ -1,7 +1,11 @@
 package edu.baylor.ecs.seer.common;
 
 import edu.baylor.ecs.seer.common.context.SeerRequestContext;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
 public class SampleObject {
 
     /**
@@ -9,14 +13,4 @@ public class SampleObject {
      */
     private SeerRequestContext request;
 
-    public SampleObject() {
-    }
-
-    public SeerRequestContext getRequest() {
-        return request;
-    }
-
-    public void setRequest(SeerRequestContext request) {
-        this.request = request;
-    }
 }

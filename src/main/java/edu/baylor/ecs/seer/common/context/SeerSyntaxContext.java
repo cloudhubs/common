@@ -1,7 +1,12 @@
 package edu.baylor.ecs.seer.common.context;
 
-public class SeerSyntaxContext {
-    public SeerSyntaxContext(){
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-    }
+@Data
+@NoArgsConstructor
+public class SeerSyntaxContext {
+
+
+
 }
