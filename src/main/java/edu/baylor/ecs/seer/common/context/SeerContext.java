@@ -6,7 +6,25 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * Wraps results from all microservices
+ * This class represents the context of all of the microservices. It holds information
+ * relating to the microservices, the initial request metadata, the response metadata,
+ * security, the global context, and the global entity context.
+ *
+ * </p>
+ *
+ * This object is not contained within another model object.
+ *
+ * </p>
+ *
+ * This object holds instances of {@link SeerMsContext},
+ * {@link SeerRequestContext}, {@link SeerResponseContext},
+ * {@link SeerSecurityContext}, {@link SeerGlobalContext} and
+ * {@link SeerEntityContext}
+ *
+ * @author  Jan Svacina
+ * @version 1.0
+ * @since   0.3.0
+ *
  */
 @Data
 @NoArgsConstructor
