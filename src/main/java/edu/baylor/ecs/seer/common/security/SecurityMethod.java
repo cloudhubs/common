@@ -24,4 +24,10 @@ public class SecurityMethod {
      */
     private Set<SecurityRole> methodRoles;
 
+    public SecurityMethod(String methodName) {
+        this.methodName = methodName;
+        childMethods = new HashSet<>();
+        methodRoles = new HashSet<>();
+    }
+
 }

@@ -1,6 +1,7 @@
 package edu.baylor.ecs.seer.common.context;
 
 import edu.baylor.ecs.seer.common.security.SecurityMethod;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -8,6 +9,7 @@ import java.util.*;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class SeerSecurityContext {
 
     /**
@@ -25,5 +27,9 @@ public class SeerSecurityContext {
      * from Local Weaver
      */
     private Set<SecurityMethod> securityMethods;
+
+    public SeerSecurityContext(String securityRoleSpecification) {
+        this.securityRoleSpecification = securityRoleSpecification;
+    }
 
 }

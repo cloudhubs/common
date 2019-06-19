@@ -24,4 +24,9 @@ public class SeerFlowMethodRepresentation {
 
     private String result;
 
+    public SeerFlowMethodRepresentation(String className, String methodName, List<SeerFlowMethod> children) {
+        this.className = className;
+        this.methodName = methodName;
+        this.children = children;
+    }
 }
