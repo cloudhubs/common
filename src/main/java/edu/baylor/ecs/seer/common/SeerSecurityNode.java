@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * This is a recursive tree-like structure used to store a hierarchy that allows cycles. Each node contains
@@ -14,7 +13,7 @@ import java.util.Objects;
  */
 @Data
 @NoArgsConstructor
-public class Node {
+public class SeerSecurityNode {
 
     /**
      * This is the node's data.
@@ -23,9 +22,9 @@ public class Node {
     /**
      * This is the node's children. It may include one or more parents of the child.
      */
-    private ArrayList<Node> children;
+    private ArrayList<SeerSecurityNode> children;
 
-    public Node(String data) {
+    public SeerSecurityNode(String data) {
         this.data = data;
         this.children = new ArrayList<>();
     }
@@ -35,9 +34,9 @@ public class Node {
      *
      * @param data This is the data for which to search.
      */
-    public Node search(String data) {
-        List<Node> visited = new ArrayList<>();
-        List<Node> matches = new ArrayList<>();
+    public SeerSecurityNode search(String data) {
+        List<SeerSecurityNode> visited = new ArrayList<>();
+        List<SeerSecurityNode> matches = new ArrayList<>();
 
         // make sure we don't search this node again
         visited.add(this);
@@ -51,13 +50,13 @@ public class Node {
 
     /**
      * This is an auxiliary internal search function to prevent the user from being required to pass multiple
-     * empty collections. Otherwise, its functionality is nearly identical to {@link Node#search(String)}.
+     * empty collections. Otherwise, its functionality is nearly identical to {@link SeerSecurityNode#search(String)}.
      *
      * @param data The Role for which to search
      * @param visited A list of visited nodes to prevent infinite recursion
      * @param matches A list of matches
      */
-    private void searchAux(String data, List<Node> visited, List<Node> matches) {
+    private void searchAux(String data, List<SeerSecurityNode> visited, List<SeerSecurityNode> matches) {
         if (visited.contains(this)) {
             return;
         }
@@ -74,11 +73,11 @@ public class Node {
      * @param visited A list of all visited nodes to prevent infinite search loops
      * @param matches A list of all current matches
      */
-    private void doSearch(String data, List<Node> visited, List<Node> matches) {
+    private void doSearch(String data, List<SeerSecurityNode> visited, List<SeerSecurityNode> matches) {
         if (this.data.equals(data)) {
             matches.add(this);
         } else if (!this.children.isEmpty()) {
-            for ( Node child : this.children ) {
+            for ( SeerSecurityNode child : this.children ) {
                 child.searchAux(data, visited, matches);
             }
         }
@@ -93,21 +92,21 @@ public class Node {
      * @return true if successful, false otherwise
      */
     public boolean insert(String data, String beneath) {
-        Node match = this.search(data);
+        SeerSecurityNode match = this.search(data);
         if (match != null) {
-            Node node = match;
+            SeerSecurityNode seerSecurityNode = match;
             match = this.search(beneath);
             if (match == null) {
                 return false;
             }
-            match.children.add(node);
+            match.children.add(seerSecurityNode);
             return true;
         }
         match = this.search(beneath);
         if (match == null) {
             return false;
         }
-        match.children.add(new Node(data));
+        match.children.add(new SeerSecurityNode(data));
 
         return true;
     }
@@ -119,7 +118,7 @@ public class Node {
      * @param data The data whose subtree will be returned
      * @return The data searched for, or null if it is not found
      */
-    public Node subTree(String data) {
+    public SeerSecurityNode subTree(String data) {
         return this.search(data);
     }
 
@@ -134,16 +133,16 @@ public class Node {
     }
 
     /**
-     * This will check if any of the node's children contain the given data. Similar to {@link Node#contains(String)},
+     * This will check if any of the node's children contain the given data. Similar to {@link SeerSecurityNode#contains(String)},
      * but excludes the current node. Notably, if any node in the subtrees of the current node's children contains
-     * the current node as a child, this will effectively operate exactly as {@link Node#contains(String)},
+     * the current node as a child, this will effectively operate exactly as {@link SeerSecurityNode#contains(String)},
      * since the current node will also be checked.
      *
      * @param data The data for which to check
      * @return true if found, false otherwise
      */
     public boolean childContains(String data) {
-        for ( Node child : this.children ) {
+        for ( SeerSecurityNode child : this.children ) {
             if (child.contains(data)) {
                 return true;
             }
