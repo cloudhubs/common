@@ -48,6 +48,30 @@ public class SeerSecurityNode {
         return matches.isEmpty() ? null : matches.get(0);
     }
 
+    public int depth(String data) {
+        List<SeerSecurityNode> visited = new ArrayList<>();
+        List<Integer> matches = new ArrayList<>();
+
+        // make sure we don't search this node again
+        visited.add(this);
+
+        // recursion
+        doDepthSearch(data, 0, visited, matches);
+
+        // return null if no match, otherwise return the lowest match
+        if(matches.isEmpty()){
+            return -1;
+        } else {
+            int min = matches.get(0);
+            for(Integer i : matches){
+                if(i < min){
+                    min = i;
+                }
+            }
+            return min;
+        }
+    }
+
     /**
      * This is an auxiliary internal search function to prevent the user from being required to pass multiple
      * empty collections. Otherwise, its functionality is nearly identical to {@link SeerSecurityNode#search(String)}.
@@ -65,6 +89,15 @@ public class SeerSecurityNode {
         doSearch(data, visited, matches);
     }
 
+    private void depthSearchAux(String data, Integer depth, List<SeerSecurityNode> visited, List<Integer> matches) {
+        if (visited.contains(this)) {
+            return;
+        }
+
+        visited.add(this);
+        doDepthSearch(data, depth, visited, matches);
+    }
+
     /**
      * This will perform the actual check of adding the current node if it matches the data and recursing to
      * all unvisited children.
@@ -74,11 +107,21 @@ public class SeerSecurityNode {
      * @param matches A list of all current matches
      */
     private void doSearch(String data, List<SeerSecurityNode> visited, List<SeerSecurityNode> matches) {
-        if (this.data.equals(data)) {
+        if (this.data.toLowerCase().equals(data.toLowerCase())) {
             matches.add(this);
         } else if (!this.children.isEmpty()) {
             for ( SeerSecurityNode child : this.children ) {
                 child.searchAux(data, visited, matches);
+            }
+        }
+    }
+
+    private void doDepthSearch(String data, Integer depth, List<SeerSecurityNode> visited, List<Integer> matches) {
+        if (this.data.toLowerCase().equals(data.toLowerCase())) {
+            matches.add(depth);
+        } else if (!this.children.isEmpty()) {
+            for ( SeerSecurityNode child : this.children ) {
+                child.depthSearchAux(data, depth + 1, visited, matches);
             }
         }
     }

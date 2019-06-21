@@ -14,4 +14,13 @@ public class SecurityRole {
      */
     private String roleName;
 
+    public String getFormattedRoleName(){
+        if(this.roleName.contains("ROLE_")){
+            int startNdx = this.roleName.indexOf("_") + 1;
+            return this.roleName.substring(startNdx);
+        } else {
+            return this.roleName;
+        }
+    }
+
 }

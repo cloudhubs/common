@@ -4,12 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class SecurityMethod {
+@NoArgsConstructor
+public class SecurityRootMethod {
 
     /**
      * Name of the method
@@ -26,10 +27,19 @@ public class SecurityMethod {
      */
     private Set<SecurityRole> methodRoles;
 
-    public SecurityMethod(String methodName) {
+    /*
+     * The type of the method (POST, PUT, etc.)
+     */
+    private HttpType httpType;
+
+    /*
+     * The class definition for the parameter of the API method
+     */
+    private String parameterType;
+
+    public SecurityRootMethod(String methodName) {
         this.methodName = methodName;
         childMethods = new HashSet<>();
         methodRoles = new HashSet<>();
     }
-
 }

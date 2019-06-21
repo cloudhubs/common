@@ -2,6 +2,8 @@ package edu.baylor.ecs.seer.common.context;
 
 import edu.baylor.ecs.seer.common.SeerSecurityNode;
 import edu.baylor.ecs.seer.common.security.SecurityMethod;
+import edu.baylor.ecs.seer.common.security.SecurityRootMethod;
+import edu.baylor.ecs.seer.common.security.SeerSecurityConstraintViolation;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,15 +26,20 @@ public class SeerSecurityContext {
     /**
      * from Security Analyzer
      */
-    private Set<SecurityMethod> securityViolations;
+    private Set<SeerSecurityConstraintViolation> securityViolations;
 
     /**
      * from Local Weaver
      */
-    private Set<SecurityMethod> allSecurityMethods;
+    private Set<SecurityRootMethod> securityRoots;
 
     public SeerSecurityContext(String securityRoleSpecificationSource) {
         this.securityRoleSpecificationSource = securityRoleSpecificationSource;
+    }
+
+    public SeerSecurityContext(String securityRoleSpecificationSource, SeerSecurityNode root) {
+        this.securityRoleSpecificationSource = securityRoleSpecificationSource;
+        this.root = root;
     }
 
 }
