@@ -4,6 +4,7 @@ import edu.baylor.ecs.seer.common.SeerSecurityNode;
 import edu.baylor.ecs.seer.common.security.SecurityMethod;
 import edu.baylor.ecs.seer.common.security.SecurityRootMethod;
 import edu.baylor.ecs.seer.common.security.SeerSecurityConstraintViolation;
+import edu.baylor.ecs.seer.common.security.SeerSecurityEntityAccessViolation;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,7 +27,8 @@ public class SeerSecurityContext {
     /**
      * from Security Analyzer
      */
-    private Set<SeerSecurityConstraintViolation> securityViolations;
+    private Set<SeerSecurityConstraintViolation> roleViolations;
+    private Set<SeerSecurityEntityAccessViolation> entityAccessViolations;
 
     /**
      * from Local Weaver

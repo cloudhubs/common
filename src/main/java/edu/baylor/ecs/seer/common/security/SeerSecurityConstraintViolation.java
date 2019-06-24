@@ -25,4 +25,10 @@ public class SeerSecurityConstraintViolation {
         this.method = securityMethod.getMethodName();
         this.roles = securityMethod.getRoles();
     }
+
+    public SeerSecurityConstraintViolation(ViolationType type, SecurityRootMethod securityRootMethod){
+        this.type = type;
+        this.method = securityRootMethod.getMethodName();
+        this.roles = securityRootMethod.getRoles();
+    }
 }

@@ -39,6 +39,8 @@ public class SecurityRootMethod {
      */
     private List<String> parameters;
 
+    private String returnType;
+
     public SecurityRootMethod(String methodName) {
         this.methodName = methodName;
         childMethods = new HashSet<>();
