@@ -19,17 +19,17 @@ public class SecurityMethod {
     /**
      * List of child methods
      */
-    private Set<SecurityMethod> childMethods;
+    private Set<String> childMethods;
 
     /**
      * List of roles associated with the method
      */
-    private Set<SecurityRole> methodRoles;
+    private Set<String> roles;
 
     public SecurityMethod(String methodName) {
         this.methodName = methodName;
         childMethods = new HashSet<>();
-        methodRoles = new HashSet<>();
+        roles = new HashSet<>();
     }
 
 }

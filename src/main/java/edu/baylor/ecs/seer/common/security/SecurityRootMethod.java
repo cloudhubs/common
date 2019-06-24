@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -20,12 +22,12 @@ public class SecurityRootMethod {
     /**
      * List of child methods
      */
-    private Set<SecurityMethod> childMethods;
+    private Set<String> childMethods;
 
     /**
      * List of roles associated with the method
      */
-    private Set<SecurityRole> methodRoles;
+    private Set<String> roles;
 
     /*
      * The type of the method (POST, PUT, etc.)
@@ -35,11 +37,12 @@ public class SecurityRootMethod {
     /*
      * The class definition for the parameter of the API method
      */
-    private String parameterType;
+    private List<String> parameters;
 
     public SecurityRootMethod(String methodName) {
         this.methodName = methodName;
         childMethods = new HashSet<>();
-        methodRoles = new HashSet<>();
+        roles = new HashSet<>();
+        parameters = new ArrayList<>();
     }
 }

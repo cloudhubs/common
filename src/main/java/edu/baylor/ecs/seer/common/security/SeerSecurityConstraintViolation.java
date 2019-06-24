@@ -4,14 +4,25 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class SeerSecurityConstraintViolation {
-    String message;
-    SecurityMethod method;
+    ViolationType type;
+    String method;
+    Set<String> roles;
 
-    public SeerSecurityConstraintViolation(String message){
-        this.message = message;
+    public SeerSecurityConstraintViolation(ViolationType type){
+        this.type = type;
+        this.roles = new HashSet<>();
+    }
+
+    public SeerSecurityConstraintViolation(ViolationType type, SecurityMethod securityMethod){
+        this.type = type;
+        this.method = securityMethod.getMethodName();
+        this.roles = securityMethod.getRoles();
     }
 }
