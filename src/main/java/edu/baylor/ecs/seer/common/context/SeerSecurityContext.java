@@ -1,91 +1,47 @@
 package edu.baylor.ecs.seer.common.context;
 
+import edu.baylor.ecs.seer.common.SeerSecurityNode;
 import edu.baylor.ecs.seer.common.security.SecurityMethod;
-import edu.baylor.ecs.seer.common.security.SecurityRole;
+import edu.baylor.ecs.seer.common.security.SecurityRootMethod;
+import edu.baylor.ecs.seer.common.security.SeerSecurityConstraintViolation;
+import edu.baylor.ecs.seer.common.security.SeerSecurityEntityAccessViolation;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.*;
 
-/**
- * @Author: JR
- *
- */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SeerSecurityContext {
 
     /**
      * from User
      * Definition of roles and its hierarchy
      */
-    private String securityRoleSpecification;
+    private String securityRoleSpecificationSource;
+
+    private SeerSecurityNode root;
 
     /**
      * from Security Analyzer
      */
-    private List<String> securityViolations;
+    private Set<SeerSecurityConstraintViolation> roleViolations;
+    private Set<SeerSecurityEntityAccessViolation> entityAccessViolations;
 
     /**
      * from Local Weaver
      */
-    private Set<SecurityMethod> securityMethods;
+    private Set<SecurityRootMethod> securityRoots;
 
-    public SeerSecurityContext() {
+    public SeerSecurityContext(String securityRoleSpecificationSource) {
+        this.securityRoleSpecificationSource = securityRoleSpecificationSource;
     }
 
-    public SeerSecurityContext(String securityRoleSpecification, List<String> securityViolations, Set<SecurityMethod> securityMethods) {
-        this.securityRoleSpecification = securityRoleSpecification;
-        this.securityViolations = securityViolations;
-        this.securityMethods = securityMethods;
-    }
-
-    public SeerSecurityContext(String securityRoleSpecification) {
-        this.securityRoleSpecification = securityRoleSpecification;
-    }
-
-    public String getSecurityRoleSpecification() {
-        return securityRoleSpecification;
-    }
-
-    public void setSecurityRoleSpecification(String securityRoleSpecification) {
-        this.securityRoleSpecification = securityRoleSpecification;
-    }
-
-    public List<String> getSecurityViolations() {
-        return securityViolations;
-    }
-
-    public void setSecurityViolations(List<String> securityViolations) {
-        this.securityViolations = securityViolations;
-    }
-
-    public Set<SecurityMethod> getSecurityMethods() {
-        return securityMethods;
-    }
-
-    public void setSecurityMethods(Set<SecurityMethod> securityMethods) {
-        this.securityMethods = securityMethods;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        SeerSecurityContext that = (SeerSecurityContext) o;
-        return Objects.equals(securityRoleSpecification, that.securityRoleSpecification) &&
-                Objects.equals(securityViolations, that.securityViolations) &&
-                Objects.equals(securityMethods, that.securityMethods);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(securityRoleSpecification, securityViolations, securityMethods);
-    }
-
-    @Override
-    public String toString() {
-        return "SeerSecurityContext{" +
-                "securityRoleSpecification='" + securityRoleSpecification + '\'' +
-                ", securityViolations=" + securityViolations +
-                ", securityMethods=" + securityMethods +
-                '}';
+    public SeerSecurityContext(String securityRoleSpecificationSource, SeerSecurityNode root) {
+        this.securityRoleSpecificationSource = securityRoleSpecificationSource;
+        this.root = root;
     }
 
 }

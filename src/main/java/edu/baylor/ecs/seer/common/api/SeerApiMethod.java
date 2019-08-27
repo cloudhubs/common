@@ -1,76 +1,51 @@
 package edu.baylor.ecs.seer.common.api;
 
 import edu.baylor.ecs.seer.common.entity.EntityModel;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Objects;
-
+/**
+ * This class is a model for representing an API method. This model keeps
+ * track of the method's class and signature, the {@link SeerApiType} of the
+ * method which can be either IN or OUT and an {@link EntityModel} which
+ * represents the parameter/return data.
+ *
+ * </p>
+ *
+ * This object is contained in the {@link edu.baylor.ecs.seer.common.context.SeerApiContext}
+ * object.
+ *
+ * </p>
+ *
+ * This object contains instances of {@link SeerApiType} and {@link EntityModel}
+ *
+ * @author  Jan Svacina
+ * @version 1.0
+ * @since   0.3.0
+ *
+ */
+@Data
+@NoArgsConstructor
 public class SeerApiMethod {
 
+    /*
+     * The name of the class where the API method resides
+     */
     private String className;
 
+    /*
+     * The name of the method itself
+     */
     private String methodName;
 
+    /*
+     * The type of the API method - IN or OUT
+     */
     private SeerApiType seerApiType;
 
+    /*
+     *
+     */
     private EntityModel entityModel;
 
-    public SeerApiMethod() {
-    }
-
-    public String getClassName() {
-        return className;
-    }
-
-    public void setClassName(String className) {
-        this.className = className;
-    }
-
-    public String getMethodName() {
-        return methodName;
-    }
-
-    public void setMethodName(String methodName) {
-        this.methodName = methodName;
-    }
-
-    public SeerApiType getSeerApiType() {
-        return seerApiType;
-    }
-
-    public void setSeerApiType(SeerApiType seerApiType) {
-        this.seerApiType = seerApiType;
-    }
-
-    public EntityModel getEntityModel() {
-        return entityModel;
-    }
-
-    public void setEntityModel(EntityModel entityModel) {
-        this.entityModel = entityModel;
-    }
-
-
-    @Override
-    public String toString() {
-        return "SeerApiMethod{" +
-                "className='" + className + '\'' +
-                ", methodName='" + methodName + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof SeerApiMethod)) return false;
-        SeerApiMethod that = (SeerApiMethod) o;
-        return Objects.equals(getClassName(), that.getClassName()) &&
-                Objects.equals(getMethodName(), that.getMethodName()) &&
-                getSeerApiType() == that.getSeerApiType() &&
-                Objects.equals(getEntityModel(), that.getEntityModel());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getClassName(), getMethodName(), getSeerApiType(), getEntityModel());
-    }
 }

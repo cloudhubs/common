@@ -1,27 +1,14 @@
 package edu.baylor.ecs.seer.common.flow;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 public class SeerFlowMethod {
 
     private String className;
 
     private String methodName;
 
-    public SeerFlowMethod() {
-    }
-
-    public String getClassName() {
-        return className;
-    }
-
-    public void setClassName(String className) {
-        this.className = className;
-    }
-
-    public String getMethodName() {
-        return methodName;
-    }
-
-    public void setMethodName(String methodName) {
-        this.methodName = methodName;
-    }
 }

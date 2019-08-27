@@ -1,5 +1,8 @@
 package edu.baylor.ecs.seer.common;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +32,8 @@ import java.util.List;
  * Each node tracks both its parents and its children for ease of traversal.
  * Height is used to determine back-edges, and is not updated once set.
  */
+@Getter
+@Setter
 public class FlowNode {
 
     // Data Fields
@@ -113,47 +118,6 @@ public class FlowNode {
     public Boolean removeParent(FlowNode parent) {
         parent.children.remove(this.id);
         return this.parents.remove(parent.id);
-    }
-
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public List<Integer> getParents() {
-        return parents;
-    }
-
-    public void setParents(List<Integer> parents) {
-        this.parents = parents;
-    }
-
-    public List<Integer> getChildren() {
-        return children;
-    }
-
-    public void setChildren(List<Integer> children) {
-        this.children = children;
-    }
-
-    public String getRaw() {
-        return raw;
-    }
-
-    public void setRaw(String raw) {
-        this.raw = raw;
     }
 
 }

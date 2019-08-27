@@ -1,14 +1,33 @@
 package edu.baylor.ecs.seer.common.context;
 
-import edu.baylor.ecs.seer.common.entity.EntityModel;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.util.List;
-import java.util.Objects;
 
 /**
- * Wraps results from all microservices
+ * This class represents the context of all of the microservices. It holds information
+ * relating to the microservices, the initial request metadata, the response metadata,
+ * security, the global context, and the global entity context.
+ *
+ * </p>
+ *
+ * This object is not contained within another model object.
+ *
+ * </p>
+ *
+ * This object holds instances of {@link SeerMsContext},
+ * {@link SeerRequestContext}, {@link SeerResponseContext},
+ * {@link SeerSecurityContext}, {@link SeerGlobalContext} and
+ * {@link SeerEntityContext}
+ *
+ * @author  Jan Svacina
+ * @version 1.0
+ * @since   0.3.0
+ *
  */
+@Data
+@NoArgsConstructor
 public class SeerContext {
 
     /**
@@ -40,95 +59,4 @@ public class SeerContext {
      * Context map of microservice mash
      */
     private SeerEntityContext contextMap;
-
-    private EntityModel contextMapEntities;
-
-    private List<SeerEntityCluster> entityClusters;
-
-    public SeerContext() {
-    }
-
-    public List<SeerMsContext> getMsContexts() {
-        return msContexts;
-    }
-
-    public void setMsContexts(List<SeerMsContext> msContexts) {
-        this.msContexts = msContexts;
-    }
-
-    public SeerRequestContext getRequest() {
-        return request;
-    }
-
-    public void setRequest(SeerRequestContext request) {
-        this.request = request;
-    }
-
-    public SeerResponseContext getResponse() {
-        return response;
-    }
-
-    public void setResponse(SeerResponseContext response) {
-        this.response = response;
-    }
-
-    public SeerGlobalContext getGlobal() {
-        return global;
-    }
-
-    public void setGlobal(SeerGlobalContext global) {
-        this.global = global;
-    }
-
-    public SeerSecurityContext getSecurity() {
-        return security;
-    }
-
-    public void setSecurity(SeerSecurityContext security) {
-        this.security = security;
-    }
-
-    public SeerEntityContext getContextMap() {
-        return contextMap;
-    }
-
-    public void setContextMap(SeerEntityContext contextMap) {
-        this.contextMap = contextMap;
-    }
-
-    public EntityModel getContextMapEntities() {
-        return contextMapEntities;
-    }
-
-    public void setContextMapEntities(EntityModel contextMapEntities) {
-        this.contextMapEntities = contextMapEntities;
-    }
-
-    public List<SeerEntityCluster> getEntityClusters() {
-        return entityClusters;
-    }
-
-    public void setEntityClusters(List<SeerEntityCluster> entityClusters) {
-        this.entityClusters = entityClusters;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof SeerContext)) return false;
-        SeerContext that = (SeerContext) o;
-        return Objects.equals(getMsContexts(), that.getMsContexts()) &&
-                Objects.equals(getRequest(), that.getRequest()) &&
-                Objects.equals(getResponse(), that.getResponse()) &&
-                Objects.equals(getSecurity(), that.getSecurity()) &&
-                Objects.equals(getGlobal(), that.getGlobal()) &&
-                Objects.equals(getContextMap(), that.getContextMap()) &&
-                Objects.equals(getContextMapEntities(), that.getContextMapEntities()) &&
-                Objects.equals(getEntityClusters(), that.getEntityClusters());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getMsContexts(), getRequest(), getResponse(), getSecurity(), getGlobal(), getContextMap(), getContextMapEntities(), getEntityClusters());
-    }
 }
