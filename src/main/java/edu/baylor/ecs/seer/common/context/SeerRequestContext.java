@@ -4,12 +4,13 @@ import edu.baylor.ecs.seer.common.Pair;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
 
 @Data
 @NoArgsConstructor
-public class SeerRequestContext {
+public class SeerRequestContext implements Serializable {
 
     /**
      * PATH to local folder

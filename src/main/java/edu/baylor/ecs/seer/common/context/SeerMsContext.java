@@ -3,9 +3,11 @@ package edu.baylor.ecs.seer.common.context;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
-public class SeerMsContext {
+public class SeerMsContext implements Serializable {
 
     /*
      * Name of the Microservice

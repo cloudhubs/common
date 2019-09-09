@@ -1,7 +1,9 @@
 package edu.baylor.ecs.seer.common;
 
+import java.io.Serializable;
+
 //@Entity
-public class GlobalWeaverLog {
+public class GlobalWeaverLog implements Serializable {
 //    @Id
 //    @GeneratedValue(strategy= GenerationType.AUTO)
 //    private Integer id;

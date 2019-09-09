@@ -1,5 +1,7 @@
 package edu.baylor.ecs.seer.common.entity;
 
-public enum SeerEntityRelation {
+import java.io.Serializable;
+
+public enum SeerEntityRelation implements Serializable {
     MANYTOONE, ONETOMANY, MANYTOMANY
 }

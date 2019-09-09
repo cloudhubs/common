@@ -5,12 +5,13 @@ import edu.baylor.ecs.seer.common.flow.SeerFlowMethod;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
 @Data
 @NoArgsConstructor
-public class SeerFlowMethodRepresentation {
+public class SeerFlowMethodRepresentation implements Serializable {
 
     private String className;
 

@@ -4,9 +4,11 @@ import edu.baylor.ecs.seer.common.context.SeerRequestContext;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
-public class SampleObject {
+public class SampleObject implements Serializable {
 
     /**
      * Request information

@@ -4,6 +4,8 @@ import edu.baylor.ecs.seer.common.entity.EntityModel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * This class is a model for representing an API method. This model keeps
  * track of the method's class and signature, the {@link SeerApiType} of the
@@ -26,7 +28,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @NoArgsConstructor
-public class SeerApiMethod {
+public class SeerApiMethod implements Serializable {
 
     /*
      * The name of the class where the API method resides

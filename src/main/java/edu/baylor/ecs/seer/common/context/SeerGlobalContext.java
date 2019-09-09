@@ -3,9 +3,11 @@ package edu.baylor.ecs.seer.common.context;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
-public class SeerGlobalContext {
+public class SeerGlobalContext implements Serializable {
 
     private Integer entityCounter;
 

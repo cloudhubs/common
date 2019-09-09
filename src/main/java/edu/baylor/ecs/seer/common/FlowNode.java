@@ -3,6 +3,7 @@ package edu.baylor.ecs.seer.common;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +35,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class FlowNode {
+public class FlowNode implements Serializable {
 
     // Data Fields
     private Integer id;

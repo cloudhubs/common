@@ -4,6 +4,7 @@ import edu.baylor.ecs.seer.common.context.SeerMsContext;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  */
 @Data
 @NoArgsConstructor
-public class HarvesterData {
+public class HarvesterData implements Serializable {
 
     /**
      * This is the HTTP status of the request.

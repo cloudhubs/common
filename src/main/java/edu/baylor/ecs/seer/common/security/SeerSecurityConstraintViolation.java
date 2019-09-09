@@ -4,13 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SeerSecurityConstraintViolation {
+public class SeerSecurityConstraintViolation implements Serializable {
     ViolationType type;
     String method;
     Set<String> roles;

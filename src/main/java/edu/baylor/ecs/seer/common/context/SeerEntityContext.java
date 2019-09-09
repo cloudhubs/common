@@ -4,6 +4,7 @@ import edu.baylor.ecs.seer.common.entity.EntityModel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -30,7 +31,7 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
-public class SeerEntityContext {
+public class SeerEntityContext implements Serializable {
 
     /*
      * The count of al entities in the context

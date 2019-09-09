@@ -1,5 +1,7 @@
 package edu.baylor.ecs.seer.common.api;
 
+import java.io.Serializable;
+
 /**
  * This enum is a model that represents the direction of an API method. The
  * values of the enum can be either IN or OUT.
@@ -18,6 +20,6 @@ package edu.baylor.ecs.seer.common.api;
  * @since   0.3.0
  *
  */
-public enum SeerApiType {
+public enum SeerApiType implements Serializable {
     IN, OUT
 }

@@ -4,12 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SecurityMethod {
+public class SecurityMethod implements Serializable {
 
     /**
      * Name of the method

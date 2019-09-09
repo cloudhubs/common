@@ -5,6 +5,7 @@ import edu.baylor.ecs.seer.common.entity.SeerFlowMethodRepresentation;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -31,7 +32,7 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
-public class SeerFlowContext {
+public class SeerFlowContext implements Serializable {
 
     private Integer linesOfCode = 0;
 

@@ -1,10 +1,12 @@
 package edu.baylor.ecs.seer.common;
 
+import java.io.Serializable;
+
 /**
  * This is an enum of different local weaver result types, used to determine the type of data obtained from local
  * weavers.
  */
-public enum LocalWeaverResultType {
+public enum LocalWeaverResultType implements Serializable {
     DATA_MODEL("dataModel"), SECURITY("security"), FLOW_STRUCTURE("flowStructure"), BYTE_CODE_FLOW_STRUCTURE("byteCodeFlowStructure");
 
     /**

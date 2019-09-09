@@ -3,6 +3,7 @@ package edu.baylor.ecs.seer.common.context;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -28,7 +29,7 @@ import java.util.List;
  */
 @Data
 @NoArgsConstructor
-public class SeerContext {
+public class SeerContext implements Serializable {
 
     /**
      * Each SeerMsContext represents information about the μservice / module
