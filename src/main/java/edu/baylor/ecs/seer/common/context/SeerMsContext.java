@@ -13,43 +13,33 @@ public class SeerMsContext {
     private String moduleName;
 
     /*
-     * Microservice IP
-     */
-    private String ip;
-
-    /*
-     * Microservice port
-     */
-    private Integer port;
-
-    /*
      * Entity Context
      */
-    private SeerEntityContext entity;
+    private SeerComponentsContext components;
 
     /*
      * Security Semantic Context
      */
-    private SeerSemanticContext semantic;
+//    private SeerSemanticContext semantic;
 
     /*
      * Security Syntax Context
      */
     private SeerSyntaxContext syntax;
 
-    /*
-     * Seer Flow Context
-     */
-    private SeerFlowContext flow;
-
-    /*
-     * Seer Api Context
-     */
-    private SeerApiContext api;
-
-    /*
-     * Seer Security Context
-     */
-    private SeerSecurityContext security;
+//    /*
+//     * Seer Flow Context
+//     */
+//    private SeerFlowContext flow;
+//
+//    /*
+//     * Seer Api Context
+//     */
+//    private SeerApiContext api;
+//
+//    /*
+//     * Seer Security Context
+//     */
+//    private SeerSecurityContext security;
 
 }

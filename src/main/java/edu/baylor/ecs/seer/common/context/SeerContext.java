@@ -58,5 +58,5 @@ public class SeerContext {
     /**
      * Context map of microservice mash
      */
-    private SeerEntityContext contextMap;
+    private SeerComponentsContext componentsMap;
 }
