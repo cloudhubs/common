@@ -5,15 +5,21 @@ import edu.baylor.ecs.seer.common.entity.InstanceVariableModel;
 import edu.baylor.ecs.seer.common.entity.SeerField;
 import edu.baylor.ecs.seer.common.entity.SeerFlowMethodRepresentation;
 import edu.baylor.ecs.seer.common.flow.SeerFlowMethod;
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
 
 @Data
 @NoArgsConstructor
 public class ComponentModel {
+  static final AtomicLong NEXT_ID = new AtomicLong(1);
+  private final long id = NEXT_ID.getAndIncrement();
+
   protected String className;
   protected List<ComponentModel> adjEntityModels;
   protected List<InstanceVariableModel> instanceVariables;
