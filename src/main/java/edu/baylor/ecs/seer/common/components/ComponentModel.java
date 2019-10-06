@@ -29,6 +29,7 @@ public class ComponentModel {
   private double percentageCandidate;
   private boolean merged;
   private boolean visited;
+  private ComponentType.Type componentType;
 
   @JsonIgnore
   public String getSimpleClassName(){
@@ -119,9 +120,5 @@ public class ComponentModel {
 
   public void setInstanceVariables(java.util.List<InstanceVariableModel> instanceVariables) {
     this.instanceVariables = instanceVariables;
-  }
-
-  public String toString() {
-    return "EntityModel(className=" + this.getClassName() + ", classNameShort=" + this.getClassNameShort() + ", fields=" + this.getFields() + ", adjEntityModels=" + this.getAdjEntityModels() + ", percentageCandidate=" + this.getPercentageCandidate() + ", merged=" + this.isMerged() + ", visited=" + this.isVisited() + ", instanceVariables=" + this.getInstanceVariables() + ")";
   }
 }

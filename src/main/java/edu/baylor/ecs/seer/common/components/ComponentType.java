@@ -25,8 +25,8 @@ public class ComponentType {
       return Type.REPOSITORY;
       case "org.springframework.boot.autoconfigure.SpringBootApplication":
       case "org.springframework.stereotype.Component":
+      default:
         return Type.GENERIC_COMPONENT;
     }
-    return null;
   }
 }
