@@ -11,57 +11,57 @@ import java.util.List;
 @NoArgsConstructor
 public class SeerRequestContext {
 
-    /**
-     * PATH to local folder
-     */
-    private String pathToCompiledMicroservices;
+  /**
+   * PATH to local folder
+   */
+  private String pathToCompiledMicroservices;
 
-    /**
-     * Organization name in folder structure
-     */
-    private String organizationName;
+  /**
+   * Organization name in folder structure
+   */
+  private String organizationName;
 
-    /**
-     * Jar name to identify organization's classes
-     */
-    private String organizationPath;
+  /**
+   * Jar name to identify organization's classes
+   */
+  private String organizationPath;
 
-    /**
-     * IP and PORT
-     */
-    private List<Pair<String, Integer>> portsToMicroservices;
+  /**
+   * IP and PORT
+   */
+  private List<Pair<String, Integer>> portsToMicroservices;
 
-    /**
-     * Local weaver ip and port
-     */
-    private String localWeaverHttp;
+  /**
+   * Local weaver ip and port
+   */
+  private String localWeaverHttp;
 
-    /**
-     * Global weaver: Entity Model Microservice ip and port
-     */
-    private String gwEntityHttp;
+  /**
+   * Global weaver: Entity Model Microservice ip and port
+   */
+  private String gwEntityHttp;
 
-    /**
-     * Global weaver: Generator Microservice ip and port
-     */
-    private String gwGeneratorHttp;
+  /**
+   * Global weaver: Generator Microservice ip and port
+   */
+  private String gwGeneratorHttp;
 
-    /**
-     * Global weaver: Generator Microservice ip and port
-     */
-    private String gwFlowHttp;
+  /**
+   * Global weaver: Generator Microservice ip and port
+   */
+  private String gwFlowHttp;
 
-    /**
-     * Indicate if using on remote server or on localhost
-     */
-    private boolean useRemote;
+  /**
+   * Indicate if using on remote server or on localhost
+   */
+  private boolean useRemote;
 
-    private Timestamp requestInitiated;
+  private Timestamp requestInitiated;
 
-    private String entityAnalyzerInterface;
+  private String entityAnalyzerInterface;
 
-    private String securityAnalyzerInterface;
+  private String securityAnalyzerInterface;
 
-    private String productsDirectory;
+  private String productsDirectory;
 
 }

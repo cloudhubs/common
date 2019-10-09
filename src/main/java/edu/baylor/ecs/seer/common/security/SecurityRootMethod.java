@@ -14,37 +14,37 @@ import java.util.Set;
 @NoArgsConstructor
 public class SecurityRootMethod {
 
-    /**
-     * Name of the method
-     */
-    private String methodName;
+  /**
+   * Name of the method
+   */
+  private String methodName;
 
-    /**
-     * List of child methods
-     */
-    private Set<String> childMethods;
+  /**
+   * List of child methods
+   */
+  private Set<String> childMethods;
 
-    /**
-     * List of roles associated with the method
-     */
-    private Set<String> roles;
+  /**
+   * List of roles associated with the method
+   */
+  private Set<String> roles;
 
-    /*
-     * The type of the method (POST, PUT, etc.)
-     */
-    private HttpType httpType;
+  /*
+   * The type of the method (POST, PUT, etc.)
+   */
+  private HttpType httpType;
 
-    /*
-     * The class definition for the parameter of the API method
-     */
-    private List<String> parameters;
+  /*
+   * The class definition for the parameter of the API method
+   */
+  private List<String> parameters;
 
-    private String returnType;
+  private String returnType;
 
-    public SecurityRootMethod(String methodName) {
-        this.methodName = methodName;
-        childMethods = new HashSet<>();
-        roles = new HashSet<>();
-        parameters = new ArrayList<>();
-    }
+  public SecurityRootMethod(String methodName) {
+    this.methodName = methodName;
+    childMethods = new HashSet<>();
+    roles = new HashSet<>();
+    parameters = new ArrayList<>();
+  }
 }

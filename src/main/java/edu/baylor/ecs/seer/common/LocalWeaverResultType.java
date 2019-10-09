@@ -5,18 +5,19 @@ package edu.baylor.ecs.seer.common;
  * weavers.
  */
 public enum LocalWeaverResultType {
-    DATA_MODEL("dataModel"), SECURITY("security"), FLOW_STRUCTURE("flowStructure"), BYTE_CODE_FLOW_STRUCTURE("byteCodeFlowStructure");
+  DATA_MODEL("dataModel"), SECURITY("security"), FLOW_STRUCTURE("flowStructure"), BYTE_CODE_FLOW_STRUCTURE(
+    "byteCodeFlowStructure");
 
-    /**
-     * This is the type of result, stored as a string.
-     */
-    private String resultType;
+  /**
+   * This is the type of result, stored as a string.
+   */
+  private String resultType;
 
-    LocalWeaverResultType(String resultType) {
-        this.resultType = resultType;
-    }
+  LocalWeaverResultType(String resultType) {
+    this.resultType = resultType;
+  }
 
-    public String getResultType(){
-        return this.resultType;
-    }
+  public String getResultType() {
+    return this.resultType;
+  }
 }

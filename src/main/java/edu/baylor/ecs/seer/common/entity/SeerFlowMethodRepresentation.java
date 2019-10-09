@@ -12,21 +12,21 @@ import java.util.Map;
 @NoArgsConstructor
 public class SeerFlowMethodRepresentation {
 
-    private String className;
+  private String className;
 
-    private String methodName;
+  private String methodName;
 
-    private List<SeerFlowMethod> children;
+  private List<SeerFlowMethod> children;
 
-    private Map<Integer, FlowNode> nodes;
+  private Map<Integer, FlowNode> nodes;
 
-    private String source;
+  private String source;
 
-    private String result;
+  private String result;
 
-    public SeerFlowMethodRepresentation(String className, String methodName, List<SeerFlowMethod> children) {
-        this.className = className;
-        this.methodName = methodName;
-        this.children = children;
-    }
+  public SeerFlowMethodRepresentation(String className, String methodName, List<SeerFlowMethod> children) {
+    this.className = className;
+    this.methodName = methodName;
+    this.children = children;
+  }
 }

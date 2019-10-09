@@ -11,52 +11,51 @@ import java.util.List;
  * security, the global context, and the global entity context.
  *
  * </p>
- *
+ * <p>
  * This object is not contained within another model object.
  *
  * </p>
- *
+ * <p>
  * This object holds instances of {@link SeerMsContext},
  * {@link SeerRequestContext}, {@link SeerResponseContext},
  * {@link SeerSecurityContext}, {@link SeerGlobalContext} and
  * {@link SeerEntityContext}
  *
- * @author  Jan Svacina
+ * @author Jan Svacina
  * @version 1.0
- * @since   0.3.0
- *
+ * @since 0.3.0
  */
 @Data
 @NoArgsConstructor
 public class SeerContext {
 
-    /**
-     * Each SeerMsContext represents information about the μservice / module
-     */
-    private List<SeerMsContext> msContexts;
+  /**
+   * Each SeerMsContext represents information about the μservice / module
+   */
+  private List<SeerMsContext> msContexts;
 
-    /**
-     * Request information
-     */
-    private SeerRequestContext request;
+  /**
+   * Request information
+   */
+  private SeerRequestContext request;
 
-    /**
-     * Response information
-     */
-    private SeerResponseContext response;
+  /**
+   * Response information
+   */
+  private SeerResponseContext response;
 
-    /**
-     * Seer Security Context
-     */
-    private SeerSecurityContext security;
+  /**
+   * Seer Security Context
+   */
+  private SeerSecurityContext security;
 
-    /**
-     * Seer global information
-     */
-    private SeerGlobalContext global;
+  /**
+   * Seer global information
+   */
+  private SeerGlobalContext global;
 
-    /**
-     * Context map of microservice mash
-     */
-    private SeerComponentsContext componentsMap;
+  /**
+   * Context map of microservice mash
+   */
+  private SeerComponentsContext componentsMap;
 }

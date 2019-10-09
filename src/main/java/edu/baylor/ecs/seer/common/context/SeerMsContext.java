@@ -7,39 +7,39 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SeerMsContext {
 
-    /*
-     * Name of the Microservice
-     */
-    private String moduleName;
+  /*
+   * Name of the Microservice
+   */
+  private String moduleName;
 
-    /*
-     * Entity Context
-     */
-    private SeerComponentsContext components;
+  /*
+   * Entity Context
+   */
+  private SeerComponentsContext components;
 
-    /*
-     * Security Semantic Context
-     */
-//    private SeerSemanticContext semantic;
+  /*
+   * Security Semantic Context
+   */
+  //    private SeerSemanticContext semantic;
 
-    /*
-     * Security Syntax Context
-     */
-    private SeerSyntaxContext syntax;
+  /*
+   * Security Syntax Context
+   */
+  private SeerSyntaxContext syntax;
 
-//    /*
-//     * Seer Flow Context
-//     */
-//    private SeerFlowContext flow;
-//
-//    /*
-//     * Seer Api Context
-//     */
-//    private SeerApiContext api;
-//
-//    /*
-//     * Seer Security Context
-//     */
-//    private SeerSecurityContext security;
+  //    /*
+  //     * Seer Flow Context
+  //     */
+  //    private SeerFlowContext flow;
+  //
+  //    /*
+  //     * Seer Api Context
+  //     */
+  //    private SeerApiContext api;
+  //
+  //    /*
+  //     * Seer Security Context
+  //     */
+  //    private SeerSecurityContext security;
 
 }

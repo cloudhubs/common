@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SampleObject {
 
-    /**
-     * Request information
-     */
-    private SeerRequestContext request;
+  /**
+   * Request information
+   */
+  private SeerRequestContext request;
 
 }

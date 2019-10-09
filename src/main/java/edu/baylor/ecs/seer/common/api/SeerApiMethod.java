@@ -8,24 +8,24 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SeerApiMethod {
 
-    /*
-     * The name of the class where the API method resides
-     */
-    private String className;
+  /*
+   * The name of the class where the API method resides
+   */
+  private String className;
 
-    /*
-     * The name of the method itself
-     */
-    private String methodName;
+  /*
+   * The name of the method itself
+   */
+  private String methodName;
 
-    /*
-     * The type of the API method - IN or OUT
-     */
-    private edu.baylor.ecs.seer.common.api.SeerApiType seerApiType;
+  /*
+   * The type of the API method - IN or OUT
+   */
+  private edu.baylor.ecs.seer.common.api.SeerApiType seerApiType;
 
-    /*
-     *
-     */
-    private ComponentModel entityModel;
+  /*
+   *
+   */
+  private ComponentModel entityModel;
 
 }

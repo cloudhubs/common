@@ -12,12 +12,12 @@ import java.util.List;
 @NoArgsConstructor
 public class InstanceVariableModel {
 
-    private String variableName;
-    private List<Pair<String, String>> attributes;
+  private String variableName;
+  private List<Pair<String, String>> attributes;
 
-    public InstanceVariableModel(String variableName) {
-        this.variableName = variableName;
-        this.attributes = new ArrayList<>();
-    }
+  public InstanceVariableModel(String variableName) {
+    this.variableName = variableName;
+    this.attributes = new ArrayList<>();
+  }
 
 }

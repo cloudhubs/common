@@ -12,9 +12,9 @@ import java.util.List;
 @AllArgsConstructor
 public class SeerEntityCluster {
 
-    /*
-     * The list of EntityModel objects which represents all the objects in the cluster
-     */
-    private List<ComponentModel> entityModels;
+  /*
+   * The list of EntityModel objects which represents all the objects in the cluster
+   */
+  private List<ComponentModel> entityModels;
 
 }

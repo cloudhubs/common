@@ -11,24 +11,24 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SeerSecurityConstraintViolation {
-    ViolationType type;
-    String method;
-    Set<String> roles;
+  ViolationType type;
+  String method;
+  Set<String> roles;
 
-    public SeerSecurityConstraintViolation(ViolationType type){
-        this.type = type;
-        this.roles = new HashSet<>();
-    }
+  public SeerSecurityConstraintViolation(ViolationType type) {
+    this.type = type;
+    this.roles = new HashSet<>();
+  }
 
-    public SeerSecurityConstraintViolation(ViolationType type, SecurityMethod securityMethod){
-        this.type = type;
-        this.method = securityMethod.getMethodName();
-        this.roles = securityMethod.getRoles();
-    }
+  public SeerSecurityConstraintViolation(ViolationType type, SecurityMethod securityMethod) {
+    this.type = type;
+    this.method = securityMethod.getMethodName();
+    this.roles = securityMethod.getRoles();
+  }
 
-    public SeerSecurityConstraintViolation(ViolationType type, SecurityRootMethod securityRootMethod){
-        this.type = type;
-        this.method = securityRootMethod.getMethodName();
-        this.roles = securityRootMethod.getRoles();
-    }
+  public SeerSecurityConstraintViolation(ViolationType type, SecurityRootMethod securityRootMethod) {
+    this.type = type;
+    this.method = securityRootMethod.getMethodName();
+    this.roles = securityRootMethod.getRoles();
+  }
 }

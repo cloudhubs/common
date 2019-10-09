@@ -10,8 +10,8 @@ import java.util.List;
 @NoArgsConstructor
 public class SeerFlowContext {
 
-    private Integer linesOfCode = 0;
+  private Integer linesOfCode = 0;
 
-    private List<SeerFlowMethodRepresentation> seerFlowMethods;
+  private List<SeerFlowMethodRepresentation> seerFlowMethods;
 
 }

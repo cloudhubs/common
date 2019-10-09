@@ -9,6 +9,6 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class SeerAnnotation {
-    private List<Pair> arguments;
+  private List<Pair> arguments;
 
 }

@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class SeerSecurityEntityAccessViolation {
 
-    ViolationType type;
+  ViolationType type;
 
-    SecurityRootMethod methodA;
-    SecurityRootMethod methodB;
+  SecurityRootMethod methodA;
+  SecurityRootMethod methodB;
 
 }

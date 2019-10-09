@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SeerFlowMethod {
 
-    private String className;
+  private String className;
 
-    private String methodName;
+  private String methodName;
 
 }

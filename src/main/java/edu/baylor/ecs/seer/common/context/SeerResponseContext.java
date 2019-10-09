@@ -9,15 +9,15 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class SeerResponseContext {
-    
-    private Integer modulesScanned;
-    
-    private Timestamp requestCompleted;
-    
-    private List<String> microservicesNames;
-    
-    private Integer status;
-    
-    private String message;
+
+  private Integer modulesScanned;
+
+  private Timestamp requestCompleted;
+
+  private List<String> microservicesNames;
+
+  private Integer status;
+
+  private String message;
 
 }

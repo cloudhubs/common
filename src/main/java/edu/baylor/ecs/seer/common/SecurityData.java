@@ -11,19 +11,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SecurityData {
 
-    /**
-     * This is the HTTP status of the request.
-     */
-    private int status;
+  /**
+   * This is the HTTP status of the request.
+   */
+  private int status;
 
-    /**
-     * This is the HTTP message from the request.
-     */
-    private String message;
+  /**
+   * This is the HTTP message from the request.
+   */
+  private String message;
 
-    /**
-     * This is the actual data returned by the request.
-     */
-    private String data;
+  /**
+   * This is the actual data returned by the request.
+   */
+  private String data;
 
 }

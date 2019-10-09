@@ -4,11 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import edu.baylor.ecs.seer.common.entity.InstanceVariableModel;
 import edu.baylor.ecs.seer.common.entity.SeerField;
 import edu.baylor.ecs.seer.common.entity.SeerFlowMethodRepresentation;
-import edu.baylor.ecs.seer.common.flow.SeerFlowMethod;
-import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,13 +26,7 @@ public class ComponentModel {
   private double percentageCandidate;
   private boolean merged;
   private boolean visited;
-  private ComponentType.Type componentType;
-
-  @JsonIgnore
-  public String getSimpleClassName(){
-      int index = this.className.lastIndexOf('.');
-      return (index > 0) ? this.className.substring(index + 1) : this.className;
-  }
+  private ComponentType componentType;
 
   public ComponentModel(String className) {
     this.className = className;
@@ -50,72 +41,79 @@ public class ComponentModel {
     this.adjEntityModels = new ArrayList<>();
     this.instanceVariables = instanceVariables;
   }
-  public void addInstanceVariableModel(InstanceVariableModel instanceVariableModel){
-      this.instanceVariables.add(instanceVariableModel);
+
+  @JsonIgnore
+  public String getSimpleClassName() {
+    int index = this.className.lastIndexOf('.');
+    return (index > 0) ? this.className.substring(index + 1) : this.className;
   }
 
-  public void setAdjEntityModel(ComponentModel entityModel){
-      this.adjEntityModels.add(entityModel);
+  public void addInstanceVariableModel(InstanceVariableModel instanceVariableModel) {
+    this.instanceVariables.add(instanceVariableModel);
+  }
+
+  public void setAdjEntityModel(ComponentModel entityModel) {
+    this.adjEntityModels.add(entityModel);
   }
 
   public String getClassName() {
     return this.className;
   }
 
-  public String getClassNameShort() {
-    return this.classNameShort;
-  }
-
-  public java.util.List<edu.baylor.ecs.seer.common.entity.SeerField> getFields() {
-    return this.fields;
-  }
-
-  public java.util.List<ComponentModel> getAdjEntityModels() {
-    return this.adjEntityModels;
-  }
-
-  public double getPercentageCandidate() {
-    return this.percentageCandidate;
-  }
-
-  public boolean isMerged() {
-    return this.merged;
-  }
-
-  public boolean isVisited() {
-    return this.visited;
-  }
-
-  public java.util.List<InstanceVariableModel> getInstanceVariables() {
-    return this.instanceVariables;
-  }
-
   public void setClassName(String className) {
     this.className = className;
+  }
+
+  public String getClassNameShort() {
+    return this.classNameShort;
   }
 
   public void setClassNameShort(String classNameShort) {
     this.classNameShort = classNameShort;
   }
 
+  public java.util.List<edu.baylor.ecs.seer.common.entity.SeerField> getFields() {
+    return this.fields;
+  }
+
   public void setFields(java.util.List<edu.baylor.ecs.seer.common.entity.SeerField> fields) {
     this.fields = fields;
+  }
+
+  public java.util.List<ComponentModel> getAdjEntityModels() {
+    return this.adjEntityModels;
   }
 
   public void setAdjEntityModels(java.util.List<ComponentModel> adjEntityModels) {
     this.adjEntityModels = adjEntityModels;
   }
 
+  public double getPercentageCandidate() {
+    return this.percentageCandidate;
+  }
+
   public void setPercentageCandidate(double percentageCandidate) {
     this.percentageCandidate = percentageCandidate;
+  }
+
+  public boolean isMerged() {
+    return this.merged;
   }
 
   public void setMerged(boolean merged) {
     this.merged = merged;
   }
 
+  public boolean isVisited() {
+    return this.visited;
+  }
+
   public void setVisited(boolean visited) {
     this.visited = visited;
+  }
+
+  public java.util.List<InstanceVariableModel> getInstanceVariables() {
+    return this.instanceVariables;
   }
 
   public void setInstanceVariables(java.util.List<InstanceVariableModel> instanceVariables) {

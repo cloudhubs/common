@@ -6,6 +6,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Pair<F, S> {
-    private F first;
-    private S second;
+  private F first;
+  private S second;
 }

@@ -10,12 +10,12 @@ import java.util.List;
 @NoArgsConstructor
 public class SeerCtClassWrapper {
 
-    private List<CtClass> entityClasses;
+  private List<CtClass> entityClasses;
 
-    private List<CtClass> apiInClasses;
+  private List<CtClass> apiInClasses;
 
-    private List<CtClass> apiOutClasses;
+  private List<CtClass> apiOutClasses;
 
-    private List<CtClass> serviceClasses;
+  private List<CtClass> serviceClasses;
 
 }

@@ -11,24 +11,24 @@ import java.util.List;
 @NoArgsConstructor
 public class SeerEntityContext {
 
-    /*
-     * The count of al entities in the context
-     */
-    private Integer entityCounter;
+  /*
+   * The count of al entities in the context
+   */
+  private Integer entityCounter;
 
-    /*
-     * The list of EntityModel objects in the context
-     */
-    private List<ComponentModel> entities;
+  /*
+   * The list of EntityModel objects in the context
+   */
+  private List<ComponentModel> entities;
 
-    /*
-     * The raw string to generate the dot graph
-     */
-    private String boundedContextSource;
+  /*
+   * The raw string to generate the dot graph
+   */
+  private String boundedContextSource;
 
-    /*
-     * The path to the graph .png file on the system
-     */
-    private String boundedContextResult;
+  /*
+   * The path to the graph .png file on the system
+   */
+  private String boundedContextResult;
 
 }

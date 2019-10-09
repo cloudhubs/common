@@ -9,6 +9,6 @@ import java.util.List;
 @NoArgsConstructor
 public class SeerApiModel {
 
-    private List<String> arguments;
+  private List<String> arguments;
 
 }

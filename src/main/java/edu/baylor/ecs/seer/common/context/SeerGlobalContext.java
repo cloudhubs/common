@@ -7,16 +7,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SeerGlobalContext {
 
-    private Integer entityCounter;
+  private Integer entityCounter;
 
-    private Integer logicalLinesCounter;
+  private Integer logicalLinesCounter;
 
-    private Integer configurationLinesCounter;
+  private Integer configurationLinesCounter;
 
-    private Integer uiLinesCounter;
+  private Integer uiLinesCounter;
 
-    private String umlDiagramSource;
+  private String umlDiagramSource;
 
-    private String umlDiagramResult;
+  private String umlDiagramResult;
 
 }
