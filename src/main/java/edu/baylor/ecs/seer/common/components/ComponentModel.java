@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import edu.baylor.ecs.seer.common.entity.InstanceVariableModel;
 import edu.baylor.ecs.seer.common.entity.SeerField;
 import edu.baylor.ecs.seer.common.entity.SeerFlowMethodRepresentation;
+import javassist.CtClass;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -27,6 +28,15 @@ public class ComponentModel {
   private boolean merged;
   private boolean visited;
   private ComponentType componentType;
+  private CtType ctType;
+  private String extendingClass;
+  private String[] implementingInterfaces;
+
+  public enum CtType {
+    ENUM_TYPE,
+    CLASS_TYPE,
+    INTERFACE_TYPE
+  }
 
   public ComponentModel(String className) {
     this.className = className;
