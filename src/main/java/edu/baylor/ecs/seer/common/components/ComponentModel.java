@@ -15,9 +15,8 @@ import java.util.concurrent.atomic.AtomicLong;
 @Data
 @NoArgsConstructor
 public class ComponentModel {
-  static final AtomicLong NEXT_ID = new AtomicLong(1);
-  private final long id = NEXT_ID.getAndIncrement();
-
+  private static long count = 0;
+  private long id;
   protected String className;
   protected List<ComponentModel> adjEntityModels;
   protected List<InstanceVariableModel> instanceVariables;
@@ -38,7 +37,9 @@ public class ComponentModel {
     INTERFACE_TYPE
   }
 
+
   public ComponentModel(String className) {
+    this.id = ++count;
     this.className = className;
     this.setVisited(false);
     this.adjEntityModels = new ArrayList<>();
@@ -46,9 +47,7 @@ public class ComponentModel {
   }
 
   public ComponentModel(String className, List<InstanceVariableModel> instanceVariables) {
-    this.className = className;
-    this.setVisited(false);
-    this.adjEntityModels = new ArrayList<>();
+    this(className);
     this.instanceVariables = instanceVariables;
   }
 
